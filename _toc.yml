@@ -9,6 +9,6 @@ options:
 
 # Chapters may be written in either Markdown or as Jupyter Notebooks
 chapters:
-  - file: chapters/_Day1-Lecture
-  - file: chapters/_Day2-Lecture
-  - file: chapters/_Python-Debugging
+  - file: chapters/01_Day1-Lecture
+  - file: chapters/02_Day2-Lecture
+  - file: chapters/03_Python-Debugging
