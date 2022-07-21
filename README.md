@@ -1,105 +1,27 @@
-# Template: Workshop Reader
+# Workshop: Python Intensive Training
 
-This repository is a template for Python-specific workshop readers for the UC 
-Davis DataLab. It uses [Jupyter Book][jb] to knit the reader. You can also 
-optionally use **Conda** to manage packages (instructions at the bottom).
-
-To get started, create a new repo on GitHub from this template
-([instructions][gh]), then `git clone` your new repo.
-
-[gh]: https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template
-[jb]: https://jupyterbook.org/en/stable/intro.html
-
-Once you've cloned the repo, here's a checklist of things to do to prepare it:
-
-1. **Conda** (optional): To create a new virtual environment with Conda, open 
-   a command line interface (such as Terminal) and run the following:
-
-   ```sh
-   conda create --name WORKSHOP_TITLE python=YOUR.DESIRED.VERSION
-   ```
-
-   Then activate the environment with:
-
-   ```sh
-   activate WORKSHOP_TITLE
-   ```
-
-   You'll need to install Jupyter Book before doing anything else. 
-
-   ```sh
-   conda install -c conda-forge jupyter-book
-   conda install -c conda-forge ghp-import
-   ```
-
-   You can skip this step if you're not going to use **Conda**.
-
-2. `README.md`: Replace the all-caps text with your workshop details.
-   + Title
-   + Quarter & year
-   + Author's name and email
-   + Helpers' names and email (optional)
-   + Reader URL
-   + Event URL
-   + Description, learning goals, & prerequisites
-
-3. `_config.yml`: Replace the all-caps text with your workshop details.
-   + Title
-   + Author
-   + Date (year only)
-   + URL
-
-4. `chapters/index.md`: The template defaults to `.md` files, but you can 
-   also use `.ipynb`. If you are using the latter, delete `index.md`, start 
-   an instance of Jupyter Notebook, and create a new file: 
-   `chapters/index.ipynb`. _You must create this file within Jupyter Notebook_.
-
-5. `_toc.yml`: Register `index.md/ipynb` in this file under `chapters`. Any 
-   subsequent chapters must also be registered like this as well.
-
-6. Compile your book with:
-
-   ```sh
-   jupyter-book build .
-   ``` 
-
-   This will generate a new `_build/` directory, which will contain HTML 
-   versions of your reader. This should not be added to Git (a `.gitignore` 
-   file is already in the template).
-
-7. `git add` all changed files, then `git commit` and `git push`.
-
-8. Serving Jupyter Books requires some special handling. Once you've committed 
-   your files, you need to run one more command, which will automatically push 
-   the rendered files to a new branch on GitHub:
-
-   ```sh
-   ghp-import -n -p -f _build/html
-   ```
-
-   From here, all rendered files will live on a `gh-pages` branch. Check to
-   make sure GitHub serves from this branch by going to Settings/Pages on 
-   GitHub. Select this branch if it is not already selected. _You must run 
-   the `ghp-import ...` step every time you wish to push updates to the live 
-   site on GitHub._
-
-9. `README.md`: Remove these template instructions, which end at this step, 
-   and, if you'd like, `git add` this file and `commit`/`push` it.
-
-Python Intensive Training
-
-[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 _[UC Davis DataLab](https://datalab.ucdavis.edu/)_  
-_Fall 2022  
-_Instructor: Maggie Berrens mlberrens@ucdavis.edu Parker Bremer parkerbremer@ucdavis.edu Frank Cerasoli ftcerasoli@ucdavis.edu  
+_Fall 2022_  
+_Instructor: Maggie Berrens <<mlberrens@ucdavis.edu>>, Parker Bremer <<parkerbremer@ucdavis.edu>>, Frank Cerasoli <<ftcerasoli@ucdavis.edu>>_  
 
-* [Reader](https://ucdavisdatalab.github.io/YOUR_REPOSITORY/)
+* [Reader](https://ucdavisdatalab.github.io/python_intensive_training/)
 * [Event Page](https://datalab.ucdavis.edu/eventscalendar/YOUR_EVENT/)
 
 This four-day course is designed to prepare incoming (or experienced) graduate students with little to no coding experience for the coding demands that many graduate courses and research often require. The bootcamp will take place over September 6th-9th from 5pm-7pm on campus in the Shields 360 (DataLab classroom). This is a great opportunity to learn a new skill and meet other graduate students! Each session will begin with about an hour of demonstration to teach fundamental Python topics. This will be followed by time where students can work on an assignment with each other and ask questions to volunteers. The assignment each day will build off the previous sessions so by the end you will have a complete Python project!
 
-After this workshop, learners will be familiar with basic Python programming syntax, libraries such as NumPy and Pandas, visualization tools, writing reusable functions, and identifying where to go to learn more.
+## Goals
+
+After this workshop, learners will be familiar with:
+
+* Basic Python programming syntax
+* Commonly used libraries such as NumPy and Pandas 
+* Visualization tools, writing reusable functions
+* Identifying where to go to learn more.
+
+## Prerequisites
+
+No prior programming experience is necessary.
 
 ## Contributing
 
