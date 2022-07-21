@@ -86,19 +86,20 @@ Once you've cloned the repo, here's a checklist of things to do to prepare it:
 9. `README.md`: Remove these template instructions, which end at this step, 
    and, if you'd like, `git add` this file and `commit`/`push` it.
 
-# Workshop: WORKSHOP TITLE
+Python Intensive Training
 
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 _[UC Davis DataLab](https://datalab.ucdavis.edu/)_  
-_QUARTER YEAR_  
-_Instructor: YOUR NAME <<YOU@YOUR.EMAIL>>_  
-_Helpers: HELPER NAME <<HELPER@THEIR.EMAIL>>_
+_Fall 2022  
+_Instructor: Maggie Berrens mlberrens@ucdavis.edu Parker Bremer parkerbremer@ucdavis.edu Frank Cerasoli ftcerasoli@ucdavis.edu  
 
 * [Reader](https://ucdavisdatalab.github.io/YOUR_REPOSITORY/)
 * [Event Page](https://datalab.ucdavis.edu/eventscalendar/YOUR_EVENT/)
 
-YOUR DESCRIPTION, LEARNING GOALS, PREREQUISITES, ETC
+This four-day course is designed to prepare incoming (or experienced) graduate students with little to no coding experience for the coding demands that many graduate courses and research often require. The bootcamp will take place over September 6th-9th from 5pm-7pm on campus in the Shields 360 (DataLab classroom). This is a great opportunity to learn a new skill and meet other graduate students! Each session will begin with about an hour of demonstration to teach fundamental Python topics. This will be followed by time where students can work on an assignment with each other and ask questions to volunteers. The assignment each day will build off the previous sessions so by the end you will have a complete Python project!
+
+After this workshop, learners will be familiar with basic Python programming syntax, libraries such as NumPy and Pandas, visualization tools, writing reusable functions, and identifying where to go to learn more.
 
 ## Contributing
 
