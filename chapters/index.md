@@ -1,4 +1,0 @@
-Overview
-========
-
-<WORKSHOP DESCRIPTION HERE>
