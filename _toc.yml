@@ -10,5 +10,8 @@ options:
 # Chapters may be written in either Markdown or as Jupyter Notebooks
 chapters:
   - file: chapters/01_Day1-Lecture
-  - file: chapters/02_Day2-Lecture
-  - file: chapters/03_Day3-Lecture
+  - file: chapters/02_Day1-Homework
+  - file: chapters/03_Day2-Lecture
+  - file: chapters/04_Day2-Homework
+  - file: chapters/05_Day3-Lecture
+  - file: chapters/06_Day3-Homework
