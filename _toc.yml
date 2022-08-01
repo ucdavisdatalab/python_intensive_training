@@ -11,4 +11,4 @@ options:
 chapters:
   - file: chapters/01_Day1-Lecture
   - file: chapters/02_Day2-Lecture
-  - file: chapters/03_Python-Debugging
+  - file: chapters/03_Day3-Lecture
