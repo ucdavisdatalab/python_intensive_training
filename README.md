@@ -3,7 +3,7 @@
 
 _[UC Davis DataLab](https://datalab.ucdavis.edu/)_  
 _Fall 2022_  
-_Instructor: Maggie Berrens <<mlberrens@ucdavis.edu>>, Parker Bremer <<parkerbremer@ucdavis.edu>>, Frank Cerasoli <<ftcerasoli@ucdavis.edu>>_  
+_Instructor: Maggie Berrens <<mlberrens@ucdavis.edu>>, Parker Bremer <<plbremer@ucdavis.edu>>, Frank Cerasoli <<ftcerasoli@ucdavis.edu>>_  
 
 * [Reader](https://ucdavisdatalab.github.io/python_intensive_training/)
 * [Event Page](https://datalab.ucdavis.edu/eventscalendar/YOUR_EVENT/)
