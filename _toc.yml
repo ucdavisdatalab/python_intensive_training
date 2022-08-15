@@ -13,6 +13,7 @@ chapters:
   - file: chapters/02_Day1-Homework
   - file: chapters/03_Day2-Lecture
   - file: chapters/04_Day2-Homework
-  - file: chapters/05_Day3-Lecture-1
-  - file: chapters/06_Day3-Lecture-2
-  - file: chapters/07_Day3-Homework
+  - file: chapters/05_Day2-HomeworkADV
+  - file: chapters/06_Day3-Lecture-1
+  - file: chapters/07_Day3-Lecture-2
+  - file: chapters/08_Day3-Homework
