@@ -17,16 +17,16 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-from google.colab import drive
-drive.mount('/content/drive')
+#we havent told my_KMeans_tool about our data yet, so we expect this to fail
+print(my_KMeans_tool.labels_)
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-[0;32m<ipython-input-1-d5df0069828e>[0m in [0;36m<module>[0;34m[0m
-[0;32m----> 1[0;31m [0;32mfrom[0m [0mgoogle[0m[0;34m.[0m[0mcolab[0m [0;32mimport[0m [0mdrive[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m      2[0m [0mdrive[0m[0;34m.[0m[0mmount[0m[0;34m([0m[0;34m'/content/drive'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-
-[0;31mModuleNotFoundError[0m: No module named 'google'
-ModuleNotFoundError: No module named 'google'
+[0;31mAttributeError[0m                            Traceback (most recent call last)
+[0;32m<ipython-input-13-9d53e9cea4d7>[0m in [0;36m<module>[0;34m[0m
+[1;32m      1[0m [0;31m#we havent told my_KMeans_tool about our data yet, so we expect this to fail[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 2[0;31m [0mprint[0m[0;34m([0m[0mmy_KMeans_tool[0m[0;34m.[0m[0mlabels_[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;31mAttributeError[0m: 'KMeans' object has no attribute 'labels_'
+AttributeError: 'KMeans' object has no attribute 'labels_'
 
