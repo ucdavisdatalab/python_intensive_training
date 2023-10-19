@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="3. Day 2" href="04_Day2-Lecture-1.html" />
+    <link rel="prev" title="3. Day 2 - Lecture 1" href="04_Day2-Lecture-1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -138,6 +138,7 @@ const thebe_selector_output = ".output, .cell_output"
    <strong>
     Day 2
    </strong>
+   - Lecture 1
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -458,46 +459,11 @@ First we can use a numpy function to load in columns of data from a txt file</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="n">year</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;finances.txt&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">usecols</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
-<span class="n">expenses</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;finances.txt&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">usecols</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
-<span class="n">profits</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;finances.txt&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">usecols</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">year</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;../data/finances.txt&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">usecols</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+<span class="n">expenses</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;../data/finances.txt&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">usecols</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">profits</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;../data/finances.txt&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">usecols</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
 
 <span class="n">gross</span> <span class="o">=</span> <span class="n">profits</span> <span class="o">-</span> <span class="n">expenses</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">OSError</span><span class="g g-Whitespace">                                   </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">7139</span><span class="n">adf77bc7</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> 
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">year</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;finances.txt&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">usecols</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">expenses</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;finances.txt&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">usecols</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">profits</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;finances.txt&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">usecols</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
-
-<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/numpy/lib/npyio.py</span> in <span class="ni">loadtxt</span><span class="nt">(fname, dtype, comments, delimiter, converters, skiprows, usecols, unpack, ndmin, encoding, max_rows, like)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1063</span>             <span class="n">fname</span> <span class="o">=</span> <span class="n">os_fspath</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1064</span>         <span class="k">if</span> <span class="n">_is_string_like</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
-<span class="ne">-&gt; </span><span class="mi">1065</span>             <span class="n">fh</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">_datasource</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="s1">&#39;rt&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1066</span>             <span class="n">fencoding</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">fh</span><span class="p">,</span> <span class="s1">&#39;encoding&#39;</span><span class="p">,</span> <span class="s1">&#39;latin1&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1067</span>             <span class="n">fh</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">fh</span><span class="p">)</span>
-
-<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/numpy/lib/_datasource.py</span> in <span class="ni">open</span><span class="nt">(path, mode, destpath, encoding, newline)</span>
-<span class="g g-Whitespace">    </span><span class="mi">192</span> 
-<span class="g g-Whitespace">    </span><span class="mi">193</span>     <span class="n">ds</span> <span class="o">=</span> <span class="n">DataSource</span><span class="p">(</span><span class="n">destpath</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">194</span>     <span class="k">return</span> <span class="n">ds</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="n">newline</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">195</span> 
-<span class="g g-Whitespace">    </span><span class="mi">196</span> 
-
-<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/numpy/lib/_datasource.py</span> in <span class="ni">open</span><span class="nt">(self, path, mode, encoding, newline)</span>
-<span class="g g-Whitespace">    </span><span class="mi">529</span>                                       <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="n">newline</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">530</span>         <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">531</span>             <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> not found.&quot;</span> <span class="o">%</span> <span class="n">path</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">532</span> 
-<span class="g g-Whitespace">    </span><span class="mi">533</span> 
-
-<span class="ne">OSError</span>: finances.txt not found.
 </pre></div>
 </div>
 </div>
@@ -538,14 +504,7 @@ First we can use a numpy function to load in columns of data from a txt file</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:matplotlib.font_manager:findfont: Font family &#39;Comic Sans MS&#39; not found.
-WARNING:matplotlib.font_manager:findfont: Font family &#39;Comic Sans MS&#39; not found.
-WARNING:matplotlib.font_manager:findfont: Font family &#39;Comic Sans MS&#39; not found.
-WARNING:matplotlib.font_manager:findfont: Font family &#39;Comic Sans MS&#39; not found.
-WARNING:matplotlib.font_manager:findfont: Font family &#39;Comic Sans MS&#39; not found.
-</pre></div>
-</div>
-<img alt="../_images/05_Day2-Lecture-2_9_1.png" src="../_images/05_Day2-Lecture-2_9_1.png" />
+<img alt="../_images/05_Day2-Lecture-2_9_0.png" src="../_images/05_Day2-Lecture-2_9_0.png" />
 </div>
 </div>
 <p>It is also possible to create a plot using categorical variables. Matplotlib allows you to pass categorical variables directly to many plotting functions.</p>
@@ -592,7 +551,7 @@ WARNING:matplotlib.font_manager:findfont: Font family &#39;Comic Sans MS&#39; no
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x79ffa1bb83d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fecf0295460&gt;
 </pre></div>
 </div>
 <img alt="../_images/05_Day2-Lecture-2_15_1.png" src="../_images/05_Day2-Lecture-2_15_1.png" />
@@ -607,6 +566,13 @@ WARNING:matplotlib.font_manager:findfont: Font family &#39;Comic Sans MS&#39; no
 <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># a figure with a 2x2 grid of Axes</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 432x288 with 0 Axes&gt;
+</pre></div>
+</div>
+<img alt="../_images/05_Day2-Lecture-2_18_1.png" src="../_images/05_Day2-Lecture-2_18_1.png" />
+<img alt="../_images/05_Day2-Lecture-2_18_2.png" src="../_images/05_Day2-Lecture-2_18_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -626,7 +592,7 @@ WARNING:matplotlib.font_manager:findfont: Font family &#39;Comic Sans MS&#39; no
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x79ff797e8490&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fecf03d28e0&gt;
 </pre></div>
 </div>
 <img alt="../_images/05_Day2-Lecture-2_19_1.png" src="../_images/05_Day2-Lecture-2_19_1.png" />
@@ -698,7 +664,7 @@ WARNING:matplotlib.font_manager:findfont: Font family &#39;Comic Sans MS&#39; no
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">3. </span><strong>Day 2</strong></p>
+            <p class="prev-next-title"><span class="section-number">3. </span><strong>Day 2</strong> - Lecture 1</p>
         </div>
     </a>
 </div>
