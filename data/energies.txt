@@ -1,0 +1,51 @@
+Iterations    Energy 
+ Iteration 0   -222.69708 
+ Iteration 1   -222.68354 
+ Iteration 2   -222.67008 
+ Iteration 3   -222.65957 
+ Iteration 4   -222.65136 
+ Iteration 5   -222.64497 
+ Iteration 6   -222.64009 
+ Iteration 7   -222.63649 
+ Iteration 8   -222.63398 
+ Iteration 9   -222.63238 
+Iteration 10   -222.63151 
+Iteration 11   -222.63121 
+Iteration 12   -222.63127 
+Iteration 13   -222.63153 
+Iteration 14   -222.63181 
+Iteration 15   -222.63197 
+Iteration 16   -222.63187 
+Iteration 17   -222.63141 
+Iteration 18   -222.63053 
+Iteration 19   -222.62919 
+Iteration 20   -222.62741 
+Iteration 21   -222.62523 
+Iteration 22   -222.62274 
+Iteration 23   -222.62007 
+Iteration 24   -222.61738 
+Iteration 25   -222.61482 
+Iteration 26   -222.61257 
+Iteration 27   -222.61078 
+Iteration 28   -222.60956 
+Iteration 29   -222.60900 
+Iteration 30   -222.60914 
+Iteration 31   -222.60999 
+Iteration 32   -222.61152 
+Iteration 33   -222.61368 
+Iteration 34   -222.61640 
+Iteration 35   -222.61962 
+Iteration 36   -222.62325 
+Iteration 37   -222.62721 
+Iteration 38   -222.63143 
+Iteration 39   -222.63581 
+Iteration 40   -222.64027 
+Iteration 41   -222.64470 
+Iteration 42   -222.64902 
+Iteration 43   -222.65311 
+Iteration 44   -222.65688 
+Iteration 45   -222.66020 
+Iteration 46   -222.66297 
+Iteration 47   -222.66508 
+Iteration 48   -222.66642 
+Iteration 49   -222.66689 
