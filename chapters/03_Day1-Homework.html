@@ -51,6 +51,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="4. Day 2 Lecture 1" href="04_Day2-Lecture-1.html" />
@@ -370,18 +372,28 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#initial-intructions">
-   3.1. Initial Intructions:
+  <a class="reference internal nav-link" href="#initial-instructions">
+   3.1. Initial Instructions:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#assignment">
-   3.2. Assignment
+  <a class="reference internal nav-link" href="#exercise-1-create-a-simple-calculator">
+   3.2. Exercise 1: Create a Simple Calculator
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-2-approximate-pi-with-random-numbers">
+   3.3. Exercise 2: Approximate pi with random numbers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instructions">
+   3.4. Instructions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#answer">
-   3.3. Answer
+   3.5. Answer
   </a>
  </li>
 </ul>
@@ -404,18 +416,28 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#initial-intructions">
-   3.1. Initial Intructions:
+  <a class="reference internal nav-link" href="#initial-instructions">
+   3.1. Initial Instructions:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#assignment">
-   3.2. Assignment
+  <a class="reference internal nav-link" href="#exercise-1-create-a-simple-calculator">
+   3.2. Exercise 1: Create a Simple Calculator
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-2-approximate-pi-with-random-numbers">
+   3.3. Exercise 2: Approximate pi with random numbers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instructions">
+   3.4. Instructions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#answer">
-   3.3. Answer
+   3.5. Answer
   </a>
  </li>
 </ul>
@@ -430,36 +452,46 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="day-1-homework">
 <h1><span class="section-number">3. </span><strong>Day 1 Homework</strong><a class="headerlink" href="#day-1-homework" title="Permalink to this headline">#</a></h1>
-<p>Here is a <a class="reference external" href="https://raw.githubusercontent.com/ucdavisdatalab/python_intensive_training/main/data/Day1CountryInfo2018.csv">csv file</a> that contains all of the countires that competed in the 2018 Winter Olympic games and their latitudes and longitudes.</p>
-<section id="initial-intructions">
-<h2><span class="section-number">3.1. </span>Initial Intructions:<a class="headerlink" href="#initial-intructions" title="Permalink to this headline">#</a></h2>
+<section id="initial-instructions">
+<h2><span class="section-number">3.1. </span>Initial Instructions:<a class="headerlink" href="#initial-instructions" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
-<li><p>Download the csv file from the link above.</p></li>
 <li><p>Open a new <a class="reference external" href="https://colab.research.google.com/">Google Colab notebook</a> and click on “New Notebook” in the corner.</p></li>
-<li><p>Click the file icon on the left toolbar, then click on the upload icon (the button on the left).</p></li>
-<li><p>Choose the new .csv file to upload in order to import the data.</p></li>
 <li><p>Here’s the actual homework!</p></li>
 </ol>
 </section>
-<section id="assignment">
-<h2><span class="section-number">3.2. </span>Assignment<a class="headerlink" href="#assignment" title="Permalink to this headline">#</a></h2>
+<section id="exercise-1-create-a-simple-calculator">
+<h2><span class="section-number">3.2. </span>Exercise 1: Create a Simple Calculator<a class="headerlink" href="#exercise-1-create-a-simple-calculator" title="Permalink to this headline">#</a></h2>
+<p>For this first exercise you will be generating a simple calculator. Generate functions that carry out the following operations:</p>
 <ul class="simple">
-<li><p>Open the csv file and examine what’s in it. What variable types are in here? Strings, floats, or integers?</p></li>
-<li><p>In your empty Colab notebook, write a script that imports the data from the file and makes a scatter plot.</p>
-<ul>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">with</span> <span class="pre">open()</span></code> command demonstrated in lecture may be helpful.</p></li>
+<li><p>Addition</p></li>
+<li><p>Subtraction</p></li>
+<li><p>Multiplication</p></li>
+<li><p>Division</p></li>
+<li><p>Exponentials</p></li>
 </ul>
-</li>
-<li><p>Try to add the equator as well if you can. (Hint: the <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hlines.html">plt.hlines()</a> function may be useful.)</p></li>
-<li><p>The plot should somewhat look like a map of the world. Unfortunately Africa’s representation at the Winter Olympics is quite low (partially due to the climate) so there are few countries there.</p></li>
-<li><p>If you have time, attempt to add axis labels and a title as demonstrated in the lecture.</p></li>
-<li><p>Congrats! You are all done.</p></li>
-</ul>
+<p>For each operation the function should take a user defined two user defined values as the input for the operation, and should return the resulting value of the operation</p>
+<p>Test the validity of your functions and print out a string detailing the result of your function</p>
+</section>
+<section id="exercise-2-approximate-pi-with-random-numbers">
+<h2><span class="section-number">3.3. </span>Exercise 2: Approximate pi with random numbers<a class="headerlink" href="#exercise-2-approximate-pi-with-random-numbers" title="Permalink to this headline">#</a></h2>
+<p><span class="math notranslate nohighlight">\(\pi\)</span> is among the most famous of irrational numbers, written approximately as 3.14159. An enormous amount of resources, both human and machine, have exhausted countless hours analyzing <span class="math notranslate nohighlight">\(\pi\)</span>’s decimal contributions, and roughly 100 trillion digits of <span class="math notranslate nohighlight">\(\pi\)</span> are known today. [<a class="reference external" href="http://www.numberworld.org/y-cruncher/">http://www.numberworld.org/y-cruncher/</a>]</p>
+<p>A far less ambitious approximation can be achieved with simple Monte Carlo methods, utilizing random numbers and statistics to converge an estimate for <span class="math notranslate nohighlight">\(\pi\)</span>.
+Imagine a circle of diameter D inscribed within a square of edge length D. Place the origin of a 2D graph at the circle’s center. The key to approximating <span class="math notranslate nohighlight">\(\pi\)</span> is generating coordinate pairs of random numbers, which correspond to (x,y) positions inside of the square, and counting how many land inside the circle. With a statistically large random sample of coordinate pairs, the ratio of points landing inside the circle to total number of points approximates the ratio of the circle’s area to the square’s area. This is known as the stone throwing problem and is mathmatically formulated as:<br/>
+<span class="math notranslate nohighlight">\(\frac{A_{circle}}{A_{square}}=\frac{N_{circle}}{N_{square}}\)</span><br/>
+where <span class="math notranslate nohighlight">\(A\)</span> represents the shape area and <span class="math notranslate nohighlight">\(N\)</span> represents the number of points to land inside of each shape. Note that all generated points should land within the square, such that <span class="math notranslate nohighlight">\(N_{total}=N_{square}\)</span>. Using a little geometry, <span class="math notranslate nohighlight">\(A_{circle}=\pi (\frac{D}{2})^2\)</span> and <span class="math notranslate nohighlight">\(A_{square}=D^2\)</span>, the final relation for <span class="math notranslate nohighlight">\(\pi\)</span> is given as:<br/>
+<span class="math notranslate nohighlight">\(\pi\approx4\frac{N_{circle}}{N_{square}}\)</span></p>
+</section>
+<section id="instructions">
+<h2><span class="section-number">3.4. </span>Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Generate a set of N random x,y pairs within a square (2*N random numbers makes N pairs of random numbers)<br/></p></li>
+<li><p>Count the x,y pairs lying inside of an inscribed circle (is <span class="math notranslate nohighlight">\(x^2+y^2 &lt; (\frac{D}{2})^2\)</span> ?)<br/></p></li>
+<li><p>Compute an approximation of <span class="math notranslate nohighlight">\(\pi\)</span><br/></p></li>
+</ol>
 </section>
 <section id="answer">
-<h2><span class="section-number">3.3. </span>Answer<a class="headerlink" href="#answer" title="Permalink to this headline">#</a></h2>
-<p><a class="reference external" href="https://colab.research.google.com/github/ucdavisdatalab/python_intensive_training/blob/main/data/HWDay1.ipynb">.ipynb file</a></p>
-<p><a class="reference external" href="https://github.com/ucdavisdatalab/python_intensive_training/tree/main/img/Day1HWplot.png">plot image</a></p>
+<h2><span class="section-number">3.5. </span>Answer<a class="headerlink" href="#answer" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="https://colab.research.google.com/github/ucdavisdatalab/python_intensive_training/blob/main/data/HW_Day1.ipynb">.ipynb file</a></p>
 </section>
 </section>
 
