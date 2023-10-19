@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>4. Day 2 Homework &#8212; Python Intensive Training</title>
+    <title>4. Day 2 - Lecture 2 &#8212; Python Intensive Training</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -51,8 +51,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="3. Day 2" href="04_Day2-Lecture-1.html" />
@@ -122,6 +120,7 @@ const thebe_selector_output = ".output, .cell_output"
    <strong>
     Day 1
    </strong>
+   - Lecture 1
   </a>
  </li>
  <li class="toctree-l1">
@@ -130,6 +129,7 @@ const thebe_selector_output = ".output, .cell_output"
    <strong>
     Day 1
    </strong>
+   - Lecture 2
   </a>
  </li>
  <li class="toctree-l1">
@@ -144,8 +144,9 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="current reference internal" href="#">
    4.
    <strong>
-    Day 2 Homework
+    Day 2
    </strong>
+   - Lecture 2
   </a>
  </li>
 </ul>
@@ -355,38 +356,13 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#initial-instructions">
-   4.1. Initial Instructions:
+  <a class="reference internal nav-link" href="#simple-plotting">
+   4.1. Simple Plotting
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#assignment">
-   4.2. Assignment
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bonus-homework">
-   4.3. Bonus Homework
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#assignment-approximate-pi-with-random-numbers">
-   4.4. Assignment: Approximate pi with random numbers
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#instructions">
-   4.5. Instructions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#answer">
-   4.6. Answer
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bonus-homework-answer">
-   4.7. Bonus Homework Answer
+  <a class="reference internal nav-link" href="#more-advanced-plotting">
+   4.2. More Advanced Plotting
   </a>
  </li>
 </ul>
@@ -398,7 +374,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Day 2 Homework</h1>
+                <h1>Day 2 - Lecture 2</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -409,38 +385,13 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#initial-instructions">
-   4.1. Initial Instructions:
+  <a class="reference internal nav-link" href="#simple-plotting">
+   4.1. Simple Plotting
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#assignment">
-   4.2. Assignment
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bonus-homework">
-   4.3. Bonus Homework
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#assignment-approximate-pi-with-random-numbers">
-   4.4. Assignment: Approximate pi with random numbers
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#instructions">
-   4.5. Instructions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#answer">
-   4.6. Answer
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bonus-homework-answer">
-   4.7. Bonus Homework Answer
+  <a class="reference internal nav-link" href="#more-advanced-plotting">
+   4.2. More Advanced Plotting
   </a>
  </li>
 </ul>
@@ -453,68 +404,266 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="day-2-homework">
-<h1><span class="section-number">4. </span><strong>Day 2 Homework</strong><a class="headerlink" href="#day-2-homework" title="Permalink to this headline">#</a></h1>
-<p>Here is a <a class="reference external" href="https://raw.githubusercontent.com/ucdavisdatalab/python_intensive_training/main/data/Day2CountryInfo2018.csv">csv</a> file that contains all of the countires that medalled in the 2018 Winter Olympic games, their latitudes and longitudes, medals won, GDP (2018), and population (2018). This time, we are going to plot the countries that medalled and add more information</p>
-<section id="initial-instructions">
-<h2><span class="section-number">4.1. </span>Initial Instructions:<a class="headerlink" href="#initial-instructions" title="Permalink to this headline">#</a></h2>
-<ol class="simple">
-<li><p>Download the csv file from the link above.</p></li>
-<li><p>Open a new <a class="reference external" href="https://colab.research.google.com/">Google Colab notebook</a> and click on “New Notebook” in the corner.</p></li>
-<li><p>Click the file icon on the left toolbar, then click on the upload icon (the button on the left).</p></li>
-<li><p>Choose the new .csv file to upload in order to import the data.</p></li>
-<li><p>Here’s the actual homework!</p></li>
-</ol>
+  <section class="tex2jax_ignore mathjax_ignore" id="day-2-lecture-2">
+<h1><span class="section-number">4. </span><strong>Day 2</strong> - Lecture 2<a class="headerlink" href="#day-2-lecture-2" title="Permalink to this headline">#</a></h1>
+<section id="simple-plotting">
+<h2><span class="section-number">4.1. </span>Simple Plotting<a class="headerlink" href="#simple-plotting" title="Permalink to this headline">#</a></h2>
+<p>Similar to NumPy, plotting also requires a library. Here is how you import it:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>So any commands we need to do with plotting will have to use <code class="docutils literal notranslate"><span class="pre">plt.</span></code> first. For now, let’s just show 2 basic types of plots. Create some arbitrary x values and y values to plot. Then, it’s just a matter of plugging in the values into the correct functions and displaying the graph.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">21</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span> <span class="mi">21</span><span class="p">)</span>
+
+<span class="c1">#for a line plot:</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="c1">#display graph command</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/05_Day2-Lecture-2_5_0.png" src="../_images/05_Day2-Lecture-2_5_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#for a scatter plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="c1">#Show plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/05_Day2-Lecture-2_6_0.png" src="../_images/05_Day2-Lecture-2_6_0.png" />
+</div>
+</div>
 </section>
-<section id="assignment">
-<h2><span class="section-number">4.2. </span>Assignment<a class="headerlink" href="#assignment" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>Open the csv file and examine what’s in it. What variable types are in here? Strings, floats, or integers?</p></li>
-<li><p>In your Colab notebook, write a script that imports the data from the file to make a scatter plot.</p></li>
-<li><p>As you parse the data, for each country you’ll need to tally up the total medals. You will also need to calculate GDP per 5000 capita (GPD per 5000 people).</p>
-<ul>
-<li><p>What techniques that we have reviewed can we use to accomplish these?</p></li>
-</ul>
-</li>
-<li><p>This time when you plot the data, color the countries according to number of medals won, and change the size of each point based on GPD per capita.</p>
-<ul>
-<li><p>See the <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html">plt.scatter documentation</a> to try to figure out how to implement this.</p></li>
-</ul>
-</li>
-<li><p>Add the equator to the plot as well.</p></li>
-<li><p>Congrats! You are all done.</p></li>
-<li><p>The plot will have fewer points this time without the countires that did not medal, but contain more information about those countries. If you want a challenge, the advanced homework will add more complexity and the other countries!</p></li>
-<li><p>In Day 3 we will delve into using more libraries and do more data analysis.</p></li>
-</ul>
-</section>
-<section id="bonus-homework">
-<h2><span class="section-number">4.3. </span>Bonus Homework<a class="headerlink" href="#bonus-homework" title="Permalink to this headline">#</a></h2>
-</section>
-<section id="assignment-approximate-pi-with-random-numbers">
-<h2><span class="section-number">4.4. </span>Assignment: Approximate pi with random numbers<a class="headerlink" href="#assignment-approximate-pi-with-random-numbers" title="Permalink to this headline">#</a></h2>
-<p><span class="math notranslate nohighlight">\(\pi\)</span> is among the most famous of irrational numbers, written approximately as 3.14159. An enormous amount of resources, both human and machine, have exhausted countless hours analyzing <span class="math notranslate nohighlight">\(\pi\)</span>’s decimal contributions, and roughly 100 trillion digits of <span class="math notranslate nohighlight">\(\pi\)</span> are known today. [<a class="reference external" href="http://www.numberworld.org/y-cruncher/">http://www.numberworld.org/y-cruncher/</a>]</p>
-<p>A far less ambitious approximation can be achieved with simple Monte Carlo methods, utilizing random numbers and statistics to converge an estimate for <span class="math notranslate nohighlight">\(\pi\)</span>.
-Imagine a circle of diameter D inscribed within a square of edge length D. Place the origin of a 2D graph at the circle’s center. The key to approximating <span class="math notranslate nohighlight">\(\pi\)</span> is generating coordinate pairs of random numbers, which correspond to (x,y) positions inside of the square, and counting how many land inside the circle. With a statistically large random sample of coordinate pairs, the ratio of points landing inside the circle to total number of points approximates the ratio of the circle’s area to the square’s area. This is known as the stone throwing problem and is mathmatically formulated as:<br/>
-<span class="math notranslate nohighlight">\(\frac{A_{circle}}{A_{square}}=\frac{N_{circle}}{N_{square}}\)</span><br/>
-where <span class="math notranslate nohighlight">\(A\)</span> represents the shape area and <span class="math notranslate nohighlight">\(N\)</span> represents the number of points to land inside of each shape. Note that all generated points should land within the square, such that <span class="math notranslate nohighlight">\(N_{total}=N_{square}\)</span>. Using a little geometry, <span class="math notranslate nohighlight">\(A_{circle}=\pi (\frac{D}{2})^2\)</span> and <span class="math notranslate nohighlight">\(A_{square}=D^2\)</span>, the final relation for <span class="math notranslate nohighlight">\(\pi\)</span> is given as:<br/>
-<span class="math notranslate nohighlight">\(\pi\approx4\frac{N_{circle}}{N_{square}}\)</span></p>
-</section>
-<section id="instructions">
-<h2><span class="section-number">4.5. </span>Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">#</a></h2>
-<ol class="simple">
-<li><p>Generate a set of N random x,y pairs within a square (2*N random numbers makes N pairs of random numbers)<br/></p></li>
-<li><p>Count the x,y pairs lying inside of an inscribed circle (is <span class="math notranslate nohighlight">\(x^2+y^2 &lt; (\frac{D}{2})^2\)</span> ?)<br/></p></li>
-<li><p>Compute an approximation of <span class="math notranslate nohighlight">\(\pi\)</span><br/></p></li>
-</ol>
-</section>
-<section id="answer">
-<h2><span class="section-number">4.6. </span>Answer<a class="headerlink" href="#answer" title="Permalink to this headline">#</a></h2>
-<p><a class="reference external" href="https://colab.research.google.com/github/ucdavisdatalab/python_intensive_training/blob/main/data/HWDay2.ipynb">.ipynb file</a></p>
-<p><a class="reference external" href="https://github.com/ucdavisdatalab/python_intensive_training/tree/main/img/Day2HWplot.png">plot image</a></p>
-</section>
-<section id="bonus-homework-answer">
-<h2><span class="section-number">4.7. </span>Bonus Homework Answer<a class="headerlink" href="#bonus-homework-answer" title="Permalink to this headline">#</a></h2>
-<p><a class="reference external" href="https://colab.research.google.com/github/ucdavisdatalab/python_intensive_training/blob/main/data/BonusHomeworkSolution.ipynb">.ipynb file</a></p>
+<section id="more-advanced-plotting">
+<h2><span class="section-number">4.2. </span>More Advanced Plotting<a class="headerlink" href="#more-advanced-plotting" title="Permalink to this headline">#</a></h2>
+<p>Let’s talk briefly about some other specifications you can do with your graph.
+First we can use a numpy function to load in columns of data from a txt file</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">year</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;finances.txt&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">usecols</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+<span class="n">expenses</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;finances.txt&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">usecols</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">profits</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;finances.txt&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">usecols</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="n">gross</span> <span class="o">=</span> <span class="n">profits</span> <span class="o">-</span> <span class="n">expenses</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">OSError</span><span class="g g-Whitespace">                                   </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">7139</span><span class="n">adf77bc7</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">year</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;finances.txt&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">usecols</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">expenses</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;finances.txt&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">usecols</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">profits</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;finances.txt&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">usecols</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/numpy/lib/npyio.py</span> in <span class="ni">loadtxt</span><span class="nt">(fname, dtype, comments, delimiter, converters, skiprows, usecols, unpack, ndmin, encoding, max_rows, like)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1063</span>             <span class="n">fname</span> <span class="o">=</span> <span class="n">os_fspath</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1064</span>         <span class="k">if</span> <span class="n">_is_string_like</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">1065</span>             <span class="n">fh</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">_datasource</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="s1">&#39;rt&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1066</span>             <span class="n">fencoding</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">fh</span><span class="p">,</span> <span class="s1">&#39;encoding&#39;</span><span class="p">,</span> <span class="s1">&#39;latin1&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1067</span>             <span class="n">fh</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">fh</span><span class="p">)</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/numpy/lib/_datasource.py</span> in <span class="ni">open</span><span class="nt">(path, mode, destpath, encoding, newline)</span>
+<span class="g g-Whitespace">    </span><span class="mi">192</span> 
+<span class="g g-Whitespace">    </span><span class="mi">193</span>     <span class="n">ds</span> <span class="o">=</span> <span class="n">DataSource</span><span class="p">(</span><span class="n">destpath</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">194</span>     <span class="k">return</span> <span class="n">ds</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="n">newline</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">195</span> 
+<span class="g g-Whitespace">    </span><span class="mi">196</span> 
+
+<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/numpy/lib/_datasource.py</span> in <span class="ni">open</span><span class="nt">(self, path, mode, encoding, newline)</span>
+<span class="g g-Whitespace">    </span><span class="mi">529</span>                                       <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="n">newline</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">530</span>         <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">531</span>             <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> not found.&quot;</span> <span class="o">%</span> <span class="n">path</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">532</span> 
+<span class="g g-Whitespace">    </span><span class="mi">533</span> 
+
+<span class="ne">OSError</span>: finances.txt not found.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#You can define a given figure dimensions</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
+
+
+<span class="c1">#We can plot multiple data sets on the same line by using multiple plt.plot commands.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">gross</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Gross&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">profits</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Profits&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">expenses</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Expenses&#39;</span><span class="p">)</span>
+
+
+<span class="c1">#plt.xlim and plt.ylim can set the range that is displayed on the graph.</span>
+<span class="c1">#Put the bounds inside a tuple: (lowerbound, upperbound)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">((</span><span class="mi">1990</span><span class="p">,</span><span class="mi">2020</span><span class="p">))</span>
+
+
+<span class="c1">#Add a plot title with plt.title</span>
+<span class="c1">#Note that we have to put quotes around the title in order to turn it into a string</span>
+<span class="c1">#We can specify things like font size and location.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Gross Income over Time&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">fontname</span><span class="o">=</span><span class="s2">&quot;Comic Sans MS&quot;</span><span class="p">)</span>
+
+
+<span class="c1">#xlabel and ylable add axis labels.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Gross Income&#39;</span><span class="p">)</span>
+
+
+<span class="c1">#If you have added labels to your plotted data in plt.plot, this command can add a legend.</span>
+<span class="c1">#The location of the legend can also be specified. Check out the documentation for details.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:matplotlib.font_manager:findfont: Font family &#39;Comic Sans MS&#39; not found.
+WARNING:matplotlib.font_manager:findfont: Font family &#39;Comic Sans MS&#39; not found.
+WARNING:matplotlib.font_manager:findfont: Font family &#39;Comic Sans MS&#39; not found.
+WARNING:matplotlib.font_manager:findfont: Font family &#39;Comic Sans MS&#39; not found.
+WARNING:matplotlib.font_manager:findfont: Font family &#39;Comic Sans MS&#39; not found.
+</pre></div>
+</div>
+<img alt="../_images/05_Day2-Lecture-2_9_1.png" src="../_images/05_Day2-Lecture-2_9_1.png" />
+</div>
+</div>
+<p>It is also possible to create a plot using categorical variables. Matplotlib allows you to pass categorical variables directly to many plotting functions.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;group_1&#39;</span><span class="p">,</span> <span class="s1">&#39;group_2&#39;</span><span class="p">,</span> <span class="s1">&#39;group_3&#39;</span><span class="p">]</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">131</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">132</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">133</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Categorical Plotting&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/05_Day2-Lecture-2_11_0.png" src="../_images/05_Day2-Lecture-2_11_0.png" />
+</div>
+</div>
+<p>##Coding Style</p>
+<p>There are essentially two ways to use Matplotlib:</p>
+<p>Rely on pyplot to implicitly create and manage the Figures and Axes, and use pyplot functions for plotting.</p>
+<p>Explicitly create Figures and Axes, and call methods on them (the “object-oriented (OO) style”).</p>
+<p>pyplot:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>  <span class="c1"># Sample data.</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">layout</span><span class="o">=</span><span class="s1">&#39;constrained&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>  <span class="c1"># Plot some data on the (implicit) axes.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;quadratic&#39;</span><span class="p">)</span>  <span class="c1"># etc.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;cubic&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x label&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y label&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Simple Plot&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x79ffa1bb83d0&gt;
+</pre></div>
+</div>
+<img alt="../_images/05_Day2-Lecture-2_15_1.png" src="../_images/05_Day2-Lecture-2_15_1.png" />
+</div>
+</div>
+<p>OO-style</p>
+<p>The Figure keeps track of all the child Axes, a group of ‘special’ Artists (titles, figure legends, colorbars, etc), and even nested subfigures.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>  <span class="c1"># an empty figure with no Axes</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>  <span class="c1"># a figure with a single Axes</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># a figure with a 2x2 grid of Axes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>  <span class="c1"># Sample data.</span>
+
+<span class="c1"># Note that even in the OO-style, we use `.pyplot.figure` to create the Figure.</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">layout</span><span class="o">=</span><span class="s1">&#39;constrained&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>  <span class="c1"># Plot some data on the axes.</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;quadratic&#39;</span><span class="p">)</span>  <span class="c1"># Plot more data on the axes...</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;cubic&#39;</span><span class="p">)</span>  <span class="c1"># ... and some more.</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x label&#39;</span><span class="p">)</span>  <span class="c1"># Add an x-label to the axes.</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;y label&#39;</span><span class="p">)</span>  <span class="c1"># Add a y-label to the axes.</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Simple Plot&quot;</span><span class="p">)</span>  <span class="c1"># Add a title to the axes.</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>  <span class="c1"># Add a legend.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x79ff797e8490&gt;
+</pre></div>
+</div>
+<img alt="../_images/05_Day2-Lecture-2_19_1.png" src="../_images/05_Day2-Lecture-2_19_1.png" />
+</div>
+</div>
+<p>#Color mapped data and Subplots</p>
+<p>Often we want to have a third dimension in a plot represented by a colors in a colormap. Matplotlib has a number of plot types that do this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+
+<span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">128</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">128</span><span class="p">))</span>
+<span class="n">Z</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">X</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="n">X</span><span class="o">**</span><span class="mi">5</span> <span class="o">+</span> <span class="n">Y</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">X</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">Y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">pc</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;RdBu_r&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">pc</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;pcolormesh()&#39;</span><span class="p">)</span>
+
+<span class="n">co</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">levels</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">1.25</span><span class="p">,</span> <span class="mf">1.25</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">co</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;contourf()&#39;</span><span class="p">)</span>
+
+<span class="n">pc</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">Z</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;plasma&#39;</span><span class="p">,</span>
+                          <span class="n">norm</span><span class="o">=</span><span class="n">mpl</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">LogNorm</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">100</span><span class="p">))</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">pc</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">extend</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;imshow() with LogNorm()&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;imshow() with LogNorm()&#39;)
+</pre></div>
+</div>
+<img alt="../_images/05_Day2-Lecture-2_22_1.png" src="../_images/05_Day2-Lecture-2_22_1.png" />
+</div>
+</div>
 </section>
 </section>
 
