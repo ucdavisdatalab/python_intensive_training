@@ -51,8 +51,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="5. Day 2 Lecture 2" href="05_Day2-Lecture-2.html" />
@@ -381,28 +379,18 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bonus-homework">
-   6.3. Bonus Homework
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#assignment-approximate-pi-with-random-numbers">
-   6.4. Assignment: Approximate pi with random numbers
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#instructions">
-   6.5. Instructions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#answer">
-   6.6. Answer
+   6.3. Answer
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bonus-homework-answer">
-   6.7. Bonus Homework Answer
+  <a class="reference internal nav-link" href="#additional-assignment">
+   6.4. Additional Assignment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   6.5. Answer
   </a>
  </li>
 </ul>
@@ -435,28 +423,18 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bonus-homework">
-   6.3. Bonus Homework
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#assignment-approximate-pi-with-random-numbers">
-   6.4. Assignment: Approximate pi with random numbers
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#instructions">
-   6.5. Instructions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#answer">
-   6.6. Answer
+   6.3. Answer
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bonus-homework-answer">
-   6.7. Bonus Homework Answer
+  <a class="reference internal nav-link" href="#additional-assignment">
+   6.4. Additional Assignment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   6.5. Answer
   </a>
  </li>
 </ul>
@@ -500,37 +478,39 @@ title="Print to PDF"
 <li><p>Add the equator to the plot as well.</p></li>
 <li><p>Congrats! You are all done.</p></li>
 <li><p>The plot will have fewer points this time without the countires that did not medal, but contain more information about those countries. If you want a challenge, the advanced homework will add more complexity and the other countries!</p></li>
-<li><p>In Day 3 we will delve into using more libraries and do more data analysis.</p></li>
 </ul>
 </section>
-<section id="bonus-homework">
-<h2><span class="section-number">6.3. </span>Bonus Homework<a class="headerlink" href="#bonus-homework" title="Permalink to this headline">#</a></h2>
-</section>
-<section id="assignment-approximate-pi-with-random-numbers">
-<h2><span class="section-number">6.4. </span>Assignment: Approximate pi with random numbers<a class="headerlink" href="#assignment-approximate-pi-with-random-numbers" title="Permalink to this headline">#</a></h2>
-<p><span class="math notranslate nohighlight">\(\pi\)</span> is among the most famous of irrational numbers, written approximately as 3.14159. An enormous amount of resources, both human and machine, have exhausted countless hours analyzing <span class="math notranslate nohighlight">\(\pi\)</span>’s decimal contributions, and roughly 100 trillion digits of <span class="math notranslate nohighlight">\(\pi\)</span> are known today. [<a class="reference external" href="http://www.numberworld.org/y-cruncher/">http://www.numberworld.org/y-cruncher/</a>]</p>
-<p>A far less ambitious approximation can be achieved with simple Monte Carlo methods, utilizing random numbers and statistics to converge an estimate for <span class="math notranslate nohighlight">\(\pi\)</span>.
-Imagine a circle of diameter D inscribed within a square of edge length D. Place the origin of a 2D graph at the circle’s center. The key to approximating <span class="math notranslate nohighlight">\(\pi\)</span> is generating coordinate pairs of random numbers, which correspond to (x,y) positions inside of the square, and counting how many land inside the circle. With a statistically large random sample of coordinate pairs, the ratio of points landing inside the circle to total number of points approximates the ratio of the circle’s area to the square’s area. This is known as the stone throwing problem and is mathmatically formulated as:<br/>
-<span class="math notranslate nohighlight">\(\frac{A_{circle}}{A_{square}}=\frac{N_{circle}}{N_{square}}\)</span><br/>
-where <span class="math notranslate nohighlight">\(A\)</span> represents the shape area and <span class="math notranslate nohighlight">\(N\)</span> represents the number of points to land inside of each shape. Note that all generated points should land within the square, such that <span class="math notranslate nohighlight">\(N_{total}=N_{square}\)</span>. Using a little geometry, <span class="math notranslate nohighlight">\(A_{circle}=\pi (\frac{D}{2})^2\)</span> and <span class="math notranslate nohighlight">\(A_{square}=D^2\)</span>, the final relation for <span class="math notranslate nohighlight">\(\pi\)</span> is given as:<br/>
-<span class="math notranslate nohighlight">\(\pi\approx4\frac{N_{circle}}{N_{square}}\)</span></p>
-</section>
-<section id="instructions">
-<h2><span class="section-number">6.5. </span>Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">#</a></h2>
-<ol class="simple">
-<li><p>Generate a set of N random x,y pairs within a square (2*N random numbers makes N pairs of random numbers)<br/></p></li>
-<li><p>Count the x,y pairs lying inside of an inscribed circle (is <span class="math notranslate nohighlight">\(x^2+y^2 &lt; (\frac{D}{2})^2\)</span> ?)<br/></p></li>
-<li><p>Compute an approximation of <span class="math notranslate nohighlight">\(\pi\)</span><br/></p></li>
-</ol>
-</section>
 <section id="answer">
-<h2><span class="section-number">6.6. </span>Answer<a class="headerlink" href="#answer" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">6.3. </span>Answer<a class="headerlink" href="#answer" title="Permalink to this headline">#</a></h2>
 <p><a class="reference external" href="https://colab.research.google.com/github/ucdavisdatalab/python_intensive_training/blob/main/data/HWDay2.ipynb">.ipynb file</a></p>
 <p><a class="reference external" href="https://github.com/ucdavisdatalab/python_intensive_training/tree/main/img/Day2HWplot.png">plot image</a></p>
 </section>
-<section id="bonus-homework-answer">
-<h2><span class="section-number">6.7. </span>Bonus Homework Answer<a class="headerlink" href="#bonus-homework-answer" title="Permalink to this headline">#</a></h2>
-<p><a class="reference external" href="https://colab.research.google.com/github/ucdavisdatalab/python_intensive_training/blob/main/data/BonusHomeworkSolution.ipynb">.ipynb file</a></p>
+<section id="additional-assignment">
+<h2><span class="section-number">6.4. </span>Additional Assignment<a class="headerlink" href="#additional-assignment" title="Permalink to this headline">#</a></h2>
+<p>If you were able to fly through the previous assignment, here is an addtional exercise that is a bit more of a challenge</p>
+<ul class="simple">
+<li><p>Your solution for Day 2 should already be able to parse all of the data from the file.</p></li>
+<li><p>Let’s examine three factors: GDP per capita, latitude, and raw population, and see how each of these affects medal results. While this is a complex question, we are going to assume a linear relationship for the sake of simplicity.</p></li>
+<li><p>Let’s start with GDP per capita. There are many ways to do this next step, but one of the easiest is to import the <code class="docutils literal notranslate"><span class="pre">scipy.stats</span></code> package and use the <code class="docutils literal notranslate"><span class="pre">linregress()</span></code> function</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">ss</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Take a look at the documentation for <a class="reference external" href="https://docs.scipy.org/doc/scipy-0.19.0/reference/generated/scipy.stats.linregress.html">linregress</a>. Particularly the examples may help.</p></li>
+<li><p>What should we input into the function? What will be the output and how many should we expect?</p></li>
+<li><p>Once you have successfully fit the function, we need to plot our results. Make a scatter plot with the x (GDP per capita) and y (medal total) values.</p></li>
+<li><p>To the scatter plot, let’s add our fit line. 1) To do this you will need to define a linear function. Note, the order of the variables will be important. 2) Create an array of x values to plot (np.linspace() may be helpful) and input them into the function you just wrote. 3) Make sure you are using the slope and intercept generated from the ss.linregress(). 4) To make a line instead of a scatter plot, the plt.plot() function will be useful</p></li>
+<li><p>Print out the R squared value as well.</p></li>
+<li><p>Now we have a visualization for the realtionship between GDP per capita and Olympic medals!</p></li>
+<li><p>Repeat this process (you can copy and paste most of your work here and just change the data you use) for latitude and population</p></li>
+<li><p>Based on the results, which of these factors seems to be most impactful on Winter Olympic success?</p></li>
+<li><p>Congrats, you’ve successfully learned to use Python to parse, plot, and statistically analyze data! This is the end of the Python Intensive Training base project.</p></li>
+</ul>
+</section>
+<section id="id1">
+<h2><span class="section-number">6.5. </span>Answer<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="https://colab.research.google.com/github/ucdavisdatalab/python_intensive_training/blob/main/data/HWDay3.ipynb">.ipynb file</a></p>
 </section>
 </section>
 
