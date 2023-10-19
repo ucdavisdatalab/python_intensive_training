@@ -17,25 +17,39 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-Dimport matplotlib.pyplot as plt
+# We will extract important information from a complicated text file.
+# It is a quantum calculation output file from a software package.
 
-x_vals = []
-y_vals = []
-with open('Day1example.txt', 'r') as infile:
-    headers = infile.readline()
-    #print(headers)
-    for line in infile:
-        x_vals.append(float(line.split()[0]))
-        y_vals.append(float(line.split()[1]))
+def parse_output(input_name, output_name):
+    energies = []
+    with open(input_name) as f_obj:
+        for line in f_obj:
+            if 'FINAL ENERGY' in line:
+                energies.append(float(line.split()[2]))
+    with open(output_name, 'w') as f_obj:
+        f_obj.write("Iterations    Energy \n")
+        for i, energy in enumerate(energies):
+            line = '%12s %12.5f \n' %('Iteration %i' %i, energy)#'Iteration %i' %i + '    ' + str(energy) + '\n'
+            f_obj.write(line)
+    return energies
 
-plt.scatter(x_vals, y_vals)
-plt.show()
+energies = parse_output('../data/file_example3.out','../data/energies.txt')
 ------------------
 
-[0;36m  File [0;32m"<ipython-input-1-c87934b48306>"[0;36m, line [0;32m1[0m
-[0;31m    Dimport matplotlib.pyplot as plt[0m
-[0m            ^[0m
-[0;31mSyntaxError[0m[0;31m:[0m invalid syntax
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
+[0;32m<ipython-input-6-663c93cfc169>[0m in [0;36m<module>[0;34m[0m
+[1;32m     15[0m     [0;32mreturn[0m [0menergies[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     16[0m [0;34m[0m[0m
+[0;32m---> 17[0;31m [0menergies[0m [0;34m=[0m [0mparse_output[0m[0;34m([0m[0;34m'../data/file_example3.out'[0m[0;34m,[0m[0;34m'../data/energies.txt'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;32m<ipython-input-6-663c93cfc169>[0m in [0;36mparse_output[0;34m(input_name, output_name)[0m
+[1;32m      4[0m [0;32mdef[0m [0mparse_output[0m[0;34m([0m[0minput_name[0m[0;34m,[0m [0moutput_name[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m     [0menergies[0m [0;34m=[0m [0;34m[[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 6[0;31m     [0;32mwith[0m [0mopen[0m[0;34m([0m[0minput_name[0m[0;34m)[0m [0;32mas[0m [0mf_obj[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      7[0m         [0;32mfor[0m [0mline[0m [0;32min[0m [0mf_obj[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      8[0m             [0;32mif[0m [0;34m'FINAL ENERGY'[0m [0;32min[0m [0mline[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 
-SyntaxError: invalid syntax (<ipython-input-1-c87934b48306>, line 1)
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: '../data/file_example3.out'
+FileNotFoundError: [Errno 2] No such file or directory: '../data/file_example3.out'
 

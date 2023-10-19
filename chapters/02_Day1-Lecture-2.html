@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2. Day 1 &#8212; Python Intensive Training</title>
+    <title>2. Day 1 - Lecture 2 &#8212; Python Intensive Training</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3. Day 2" href="04_Day2-Lecture-1.html" />
-    <link rel="prev" title="1. Day 1" href="01_Day1-Lecture-1.html" />
+    <link rel="prev" title="1. Day 1 - Lecture 1" href="01_Day1-Lecture-1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -121,6 +121,7 @@ const thebe_selector_output = ".output, .cell_output"
    <strong>
     Day 1
    </strong>
+   - Lecture 1
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -129,6 +130,7 @@ const thebe_selector_output = ".output, .cell_output"
    <strong>
     Day 1
    </strong>
+   - Lecture 2
   </a>
  </li>
  <li class="toctree-l1">
@@ -354,12 +356,26 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reading-in-files">
-   2.1.
-   <strong>
-    Reading in Files
-   </strong>
+  <a class="reference internal nav-link" href="#file-handling-and-functions">
+   2.1. File handling and functions
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-1-scatter-plot">
+     2.1.1. Example 1) Scatter plot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-2-counting-words">
+     2.1.2. Example 2) Counting words
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-3-functions">
+     2.1.3. Example 3) Functions
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -370,7 +386,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Day 1</h1>
+                <h1>Day 1 - Lecture 2</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -381,12 +397,26 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reading-in-files">
-   2.1.
-   <strong>
-    Reading in Files
-   </strong>
+  <a class="reference internal nav-link" href="#file-handling-and-functions">
+   2.1. File handling and functions
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-1-scatter-plot">
+     2.1.1. Example 1) Scatter plot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-2-counting-words">
+     2.1.2. Example 2) Counting words
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-3-functions">
+     2.1.3. Example 3) Functions
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -398,148 +428,190 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="day-1">
-<h1><span class="section-number">2. </span><strong>Day 1</strong><a class="headerlink" href="#day-1" title="Permalink to this headline">#</a></h1>
-<section id="reading-in-files">
-<h2><span class="section-number">2.1. </span><strong>Reading in Files</strong><a class="headerlink" href="#reading-in-files" title="Permalink to this headline">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="day-1-lecture-2">
+<h1><span class="section-number">2. </span><strong>Day 1</strong> - Lecture 2<a class="headerlink" href="#day-1-lecture-2" title="Permalink to this headline">#</a></h1>
+<section id="file-handling-and-functions">
+<h2><span class="section-number">2.1. </span>File handling and functions<a class="headerlink" href="#file-handling-and-functions" title="Permalink to this headline">#</a></h2>
+<section id="example-1-scatter-plot">
+<h3><span class="section-number">2.1.1. </span>Example 1) Scatter plot<a class="headerlink" href="#example-1-scatter-plot" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Dimport</span> <span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># To open a text based file, you can use open() function</span>
 
-<span class="n">x_vals</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">y_vals</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;Day1example.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">infile</span><span class="p">:</span>
-    <span class="n">headers</span> <span class="o">=</span> <span class="n">infile</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
-    <span class="c1">#print(headers)</span>
-    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">infile</span><span class="p">:</span>
-        <span class="n">x_vals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">]))</span>
-        <span class="n">y_vals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="n">f_obj</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../data/file_example1.txt&#39;</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_vals</span><span class="p">,</span> <span class="n">y_vals</span><span class="p">)</span>
+<span class="c1"># Let&#39;s pring f_obj to see what it is.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f_obj</span><span class="p">)</span>
+
+<span class="c1"># As you can see it is an object.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;_io.TextIOWrapper name=&#39;../data/file_example1.txt&#39; mode=&#39;r&#39; encoding=&#39;UTF-8&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We can see the entire text by print(f_obj.read())</span>
+<span class="c1">#print(f_obj.read())</span>
+
+<span class="c1"># Or we can print the texts line by line</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f_obj</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f_obj</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>xvals                 yvals
+
+0.8641216311612758    0.23919054492654035
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># For loop can be used to go through all the lines.</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">f_obj</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">break</span> <span class="c1"># break here to avoid printing the entire file.</span>
+
+<span class="c1"># As you can see, the f_obj.readline() removed the first two line. Let&#39;s reset it to the beginning of the line and extract xvals and yvals.</span>
+<span class="n">f_obj</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">xvals</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">yvals</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">f_obj</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span> <span class="c1"># To remove the column names</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f_obj</span><span class="p">:</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="n">xvals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+    <span class="n">yvals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">xvals</span><span class="p">,</span> <span class="n">yvals</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-1-c87934b48306&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
-    <span class="n">Dimport</span> <span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-            <span class="o">^</span>
-<span class="ne">SyntaxError</span>: invalid syntax
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.2131415384891292    0.9434728716309931
 </pre></div>
 </div>
+<img alt="../_images/02_Day1-Lecture-2_5_1.png" src="../_images/02_Day1-Lecture-2_5_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># More indexing</span>
-<span class="n">months</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Jan&quot;</span><span class="p">,</span> <span class="s2">&quot;Feb&quot;</span><span class="p">,</span> <span class="s2">&quot;Mar&quot;</span><span class="p">,</span> <span class="s2">&quot;April&quot;</span><span class="p">,</span> <span class="s2">&quot;May&quot;</span><span class="p">,</span> <span class="s2">&quot;June&quot;</span><span class="p">,</span> <span class="s2">&quot;July&quot;</span><span class="p">,</span> <span class="s2">&quot;August&quot;</span><span class="p">,</span> <span class="s2">&quot;Sep&quot;</span><span class="p">,</span> <span class="s2">&quot;Oct&quot;</span><span class="p">,</span> <span class="s2">&quot;Nov&quot;</span><span class="p">,</span> <span class="s2">&quot;Dec&quot;</span><span class="p">]</span>
-<span class="n">summer_months</span> <span class="o">=</span> <span class="n">months</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">8</span><span class="p">]</span>
-<span class="c1">#print(summer_months)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Let&#39;s remove half of the data points and save them in a text file.</span>
+<span class="n">xvals_new</span> <span class="o">=</span> <span class="n">xvals</span><span class="p">[</span><span class="mi">0</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">yvals_new</span> <span class="o">=</span> <span class="n">yvals</span><span class="p">[</span><span class="mi">0</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">months</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">months</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+<span class="c1"># To test the indexing.</span>
+<span class="c1">#test_list = list(range(100))</span>
+<span class="c1">#print(test_list[0::2])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">xvals_new</span><span class="p">,</span> <span class="n">yvals_new</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">xvals_new</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">yvals_new</span><span class="p">))</span>
+<span class="c1"># Saving the values</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../data/file_example1_after.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_obj</span><span class="p">:</span>
+    <span class="n">f_obj</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;xvals    yvals </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">xvals</span><span class="p">,</span> <span class="n">yvals</span><span class="p">):</span>
+        <span class="n">new_line</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">+</span> <span class="s1">&#39;    &#39;</span> <span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="n">f_obj</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">new_line</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dec
-[&#39;Mar&#39;, &#39;April&#39;, &#39;May&#39;, &#39;June&#39;, &#39;July&#39;, &#39;August&#39;, &#39;Sep&#39;, &#39;Oct&#39;]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50 50
 </pre></div>
 </div>
+<img alt="../_images/02_Day1-Lecture-2_6_1.png" src="../_images/02_Day1-Lecture-2_6_1.png" />
 </div>
 </div>
+</section>
+<section id="example-2-counting-words">
+<h3><span class="section-number">2.1.2. </span>Example 2) Counting words<a class="headerlink" href="#example-2-counting-words" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Arrays</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">my_list</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]]</span>
-<span class="n">my_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We will be using the file_example2.txt to count the each words.</span>
 
-<span class="c1">#print(my_list[2][2])</span>
-<span class="c1">#print(my_matrix[2,2])</span>
-<span class="c1">#print(my_matrix)</span>
-<span class="c1">#print(my_matrix[1:,:2])</span>
+<span class="n">word_dict</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">removing_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;!&#39;</span><span class="p">,</span> <span class="s1">&#39;?&#39;</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="s1">&#39;;&#39;</span><span class="p">]</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../data/file_example2.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_obj</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f_obj</span><span class="p">:</span>
+        <span class="n">splitted</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">splitted</span><span class="p">:</span>
+            <span class="n">word</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">remove</span> <span class="ow">in</span> <span class="n">removing_list</span><span class="p">:</span>
+                <span class="k">while</span> <span class="n">remove</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
+                    <span class="n">word</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">remove</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">word_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                <span class="n">word_dict</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">word_dict</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">word_dict</span><span class="p">)</span>
+
+<span class="c1"># Can you write a file with two columns named &quot;Words&quot; and &quot;Counts?&quot;</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-[[99, 2, 3], [4, 5, 6], [7, 8, 9]]
-[[99, 2, 3], [4, 5, 6], [7, 8, 9]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Call&#39;: 1, &#39;me&#39;: 6, &#39;Ishmael&#39;: 1, &#39;Some&#39;: 2, &#39;years&#39;: 1, &#39;ago&#39;: 1, &#39;&#39;: 13, &#39;never&#39;: 1, &#39;mind&#39;: 1, &#39;how&#39;: 1, &#39;long&#39;: 1, &#39;precisely&#39;: 1, &#39;having&#39;: 1, &#39;little&#39;: 2, &#39;or&#39;: 4, &#39;no&#39;: 1, &#39;money&#39;: 2, &#39;in&#39;: 23, &#39;my&#39;: 4, &#39;purse&#39;: 1, &#39;and&#39;: 29, &#39;nothing&#39;: 2, &#39;particular&#39;: 1, &#39;to&#39;: 21, &#39;interest&#39;: 1, &#39;on&#39;: 3, &#39;shore&#39;: 1, &#39;I&#39;: 9, &#39;thought&#39;: 1, &#39;would&#39;: 2, &#39;sail&#39;: 1, &#39;about&#39;: 2, &#39;a&#39;: 25, &#39;see&#39;: 4, &#39;the&#39;: 52, &#39;watery&#39;: 1, &#39;part&#39;: 1, &#39;of&#39;: 35, &#39;world&#39;: 1, &#39;It&#39;: 2, &#39;is&#39;: 17, &#39;way&#39;: 2, &#39;have&#39;: 1, &#39;driving&#39;: 1, &#39;off&#39;: 2, &#39;spleen&#39;: 1, &#39;regulating&#39;: 1, &#39;circulation&#39;: 1, &#39;Whenever&#39;: 1, &#39;find&#39;: 2, &#39;myself&#39;: 2, &#39;growing&#39;: 1, &#39;grim&#39;: 1, &#39;mouth&#39;: 1, &#39;whenever&#39;: 3, &#39;it&#39;: 11, &#39;damp&#39;: 1, &#39;drizzly&#39;: 1, &#39;November&#39;: 1, &#39;soul&#39;: 2, &#39;involuntarily&#39;: 1, &#39;pausing&#39;: 1, &#39;before&#39;: 2, &#39;coffin&#39;: 1, &#39;warehouses&#39;: 2, &#39;bringing&#39;: 1, &#39;up&#39;: 3, &#39;rear&#39;: 1, &#39;every&#39;: 3, &#39;funeral&#39;: 1, &#39;meet&#39;: 1, &#39;especially&#39;: 1, &#39;hypos&#39;: 1, &#39;get&#39;: 4, &#39;such&#39;: 2, &#39;an&#39;: 2, &#39;upper&#39;: 1, &#39;hand&#39;: 1, &#39;that&#39;: 7, &#39;requires&#39;: 1, &#39;strong&#39;: 1, &#39;moral&#39;: 1, &#39;principle&#39;: 1, &#39;prevent&#39;: 1, &#39;from&#39;: 6, &#39;deliberately&#39;: 1, &#39;stepping&#39;: 1, &#39;into&#39;: 3, &#39;street&#39;: 1, &#39;methodically&#39;: 1, &#39;knocking&#39;: 1, &#39;people’s&#39;: 1, &#39;hats&#39;: 1, &#39;then&#39;: 2, &#39;account&#39;: 1, &#39;high&#39;: 3, &#39;time&#39;: 3, &#39;sea&#39;: 3, &#39;as&#39;: 9, &#39;soon&#39;: 1, &#39;can&#39;: 2, &#39;This&#39;: 1, &#39;substitute&#39;: 1, &#39;for&#39;: 5, &#39;pistol&#39;: 1, &#39;ball&#39;: 1, &#39;With&#39;: 1, &#39;philosophical&#39;: 1, &#39;flourish&#39;: 1, &#39;Cato&#39;: 1, &#39;throws&#39;: 1, &#39;himself&#39;: 1, &#39;upon&#39;: 7, &#39;his&#39;: 8, &#39;sword&#39;: 1, &#39;quietly&#39;: 1, &#39;take&#39;: 2, &#39;ship&#39;: 2, &#39;There&#39;: 4, &#39;surprising&#39;: 1, &#39;this&#39;: 7, &#39;If&#39;: 1, &#39;they&#39;: 6, &#39;but&#39;: 3, &#39;knew&#39;: 1, &#39;almost&#39;: 3, &#39;all&#39;: 12, &#39;men&#39;: 3, &#39;their&#39;: 2, &#39;degree&#39;: 1, &#39;some&#39;: 6, &#39;other&#39;: 2, &#39;cherish&#39;: 1, &#39;very&#39;: 1, &#39;nearly&#39;: 1, &#39;same&#39;: 2, &#39;feelings&#39;: 1, &#39;towards&#39;: 1, &#39;ocean&#39;: 2, &#39;with&#39;: 5, &#39;now&#39;: 2, &#39;your&#39;: 5, &#39;insular&#39;: 1, &#39;city&#39;: 2, &#39;Manhattoes&#39;: 1, &#39;belted&#39;: 1, &#39;round&#39;: 1, &#39;by&#39;: 6, &#39;wharves&#39;: 1, &#39;Indian&#39;: 1, &#39;isles&#39;: 1, &#39;coral&#39;: 1, &#39;reefs&#39;: 1, &#39;commerce&#39;: 1, &#39;surrounds&#39;: 1, &#39;her&#39;: 1, &#39;surf&#39;: 1, &#39;Right&#39;: 1, &#39;left&#39;: 1, &#39;streets&#39;: 2, &#39;you&#39;: 13, &#39;waterward&#39;: 1, &#39;Its&#39;: 1, &#39;extreme&#39;: 1, &#39;downtown&#39;: 1, &#39;battery&#39;: 1, &#39;where&#39;: 1, &#39;noble&#39;: 1, &#39;mole&#39;: 1, &#39;washed&#39;: 1, &#39;waves&#39;: 1, &#39;cooled&#39;: 1, &#39;breezes&#39;: 1, &#39;which&#39;: 2, &#39;few&#39;: 1, &#39;hours&#39;: 1, &#39;previous&#39;: 1, &#39;were&#39;: 5, &#39;out&#39;: 2, &#39;sight&#39;: 2, &#39;land&#39;: 4, &#39;Look&#39;: 1, &#39;at&#39;: 2, &#39;crowds&#39;: 2, &#39;water&#39;: 7, &#39;gazers&#39;: 1, &#39;there&#39;: 7, &#39;Circumambulate&#39;: 1, &#39;dreamy&#39;: 1, &#39;Sabbath&#39;: 1, &#39;afternoon&#39;: 1, &#39;Go&#39;: 2, &#39;Corlears&#39;: 1, &#39;Hook&#39;: 1, &#39;Coenties&#39;: 1, &#39;Slip&#39;: 1, &#39;thence&#39;: 1, &#39;Whitehall&#39;: 1, &#39;northward&#39;: 1, &#39;What&#39;: 3, &#39;do&#39;: 2, &#39;Posted&#39;: 1, &#39;like&#39;: 2, &#39;silent&#39;: 1, &#39;sentinels&#39;: 1, &#39;around&#39;: 1, &#39;town&#39;: 1, &#39;stand&#39;: 4, &#39;thousands&#39;: 2, &#39;mortal&#39;: 1, &#39;fixed&#39;: 2, &#39;reveries&#39;: 2, &#39;leaning&#39;: 1, &#39;against&#39;: 1, &#39;spiles&#39;: 1, &#39;seated&#39;: 1, &#39;pierheads&#39;: 1, &#39;looking&#39;: 1, &#39;over&#39;: 1, &#39;bulwarks&#39;: 1, &#39;ships&#39;: 2, &#39;China&#39;: 1, &#39;aloft&#39;: 1, &#39;rigging&#39;: 1, &#39;if&#39;: 4, &#39;striving&#39;: 1, &#39;still&#39;: 2, &#39;better&#39;: 1, &#39;seaward&#39;: 1, &#39;peep&#39;: 1, &#39;But&#39;: 5, &#39;these&#39;: 1, &#39;are&#39;: 3, &#39;landsmen&#39;: 1, &#39;week&#39;: 1, &#39;days&#39;: 1, &#39;pent&#39;: 1, &#39;lath&#39;: 1, &#39;plaster&#39;: 1, &#39;tied&#39;: 1, &#39;counters&#39;: 1, &#39;nailed&#39;: 1, &#39;benches&#39;: 1, &#39;clinched&#39;: 1, &#39;desks&#39;: 1, &#39;How&#39;: 1, &#39;Are&#39;: 1, &#39;green&#39;: 1, &#39;fields&#39;: 1, &#39;gone&#39;: 1, &#39;here&#39;: 5, &#39;look&#39;: 1, &#39;come&#39;: 2, &#39;more&#39;: 2, &#39;pacing&#39;: 1, &#39;straight&#39;: 1, &#39;seemingly&#39;: 1, &#39;bound&#39;: 1, &#39;dive&#39;: 1, &#39;Strange&#39;: 1, &#39;Nothing&#39;: 1, &#39;will&#39;: 3, &#39;content&#39;: 1, &#39;them&#39;: 3, &#39;extremest&#39;: 1, &#39;limit&#39;: 1, &#39;loitering&#39;: 1, &#39;under&#39;: 1, &#39;shady&#39;: 1, &#39;lee&#39;: 1, &#39;yonder&#39;: 2, &#39;not&#39;: 4, &#39;suffice&#39;: 1, &#39;No&#39;: 1, &#39;They&#39;: 1, &#39;must&#39;: 1, &#39;just&#39;: 1, &#39;nigh&#39;: 1, &#39;possibly&#39;: 1, &#39;without&#39;: 2, &#39;falling&#39;: 1, &#39;And&#39;: 2, &#39;miles&#39;: 3, &#39;leagues&#39;: 1, &#39;Inlanders&#39;: 1, &#39;lanes&#39;: 1, &#39;alleys&#39;: 1, &#39;avenues&#39;: 1, &#39;north&#39;: 1, &#39;east&#39;: 1, &#39;south&#39;: 1, &#39;west&#39;: 1, &#39;Yet&#39;: 1, &#39;unite&#39;: 1, &#39;Tell&#39;: 1, &#39;does&#39;: 1, &#39;magnetic&#39;: 1, &#39;virtue&#39;: 1, &#39;needles&#39;: 1, &#39;compasses&#39;: 1, &#39;those&#39;: 1, &#39;attract&#39;: 1, &#39;thither&#39;: 1, &#39;Once&#39;: 1, &#39;Say&#39;: 1, &#39;country&#39;: 1, &#39;lakes&#39;: 1, &#39;Take&#39;: 1, &#39;any&#39;: 1, &#39;path&#39;: 1, &#39;please&#39;: 1, &#39;ten&#39;: 1, &#39;one&#39;: 3, &#39;carries&#39;: 1, &#39;down&#39;: 2, &#39;dale&#39;: 1, &#39;leaves&#39;: 2, &#39;pool&#39;: 1, &#39;stream&#39;: 2, &#39;magic&#39;: 2, &#39;Let&#39;: 1, &#39;most&#39;: 2, &#39;absentminded&#39;: 1, &#39;be&#39;: 4, &#39;plunged&#39;: 2, &#39;deepest&#39;: 1, &#39;man&#39;: 1, &#39;legs&#39;: 1, &#39;set&#39;: 1, &#39;feet&#39;: 1, &#39;agoing&#39;: 1, &#39;he&#39;: 5, &#39;infallibly&#39;: 1, &#39;lead&#39;: 1, &#39;region&#39;: 1, &#39;Should&#39;: 1, &#39;ever&#39;: 2, &#39;athirst&#39;: 1, &#39;great&#39;: 1, &#39;American&#39;: 1, &#39;desert&#39;: 1, &#39;try&#39;: 1, &#39;experiment&#39;: 1, &#39;caravan&#39;: 1, &#39;happen&#39;: 1, &#39;supplied&#39;: 1, &#39;metaphysical&#39;: 1, &#39;professor&#39;: 1, &#39;Yes&#39;: 1, &#39;knows&#39;: 1, &#39;meditation&#39;: 1, &#39;wedded&#39;: 1, &#39;artist&#39;: 1, &#39;He&#39;: 1, &#39;desires&#39;: 1, &#39;paint&#39;: 1, &#39;dreamiest&#39;: 1, &#39;shadiest&#39;: 1, &#39;quietest&#39;: 1, &#39;enchanting&#39;: 1, &#39;bit&#39;: 1, &#39;romantic&#39;: 1, &#39;landscape&#39;: 1, &#39;valley&#39;: 1, &#39;Saco&#39;: 1, &#39;chief&#39;: 1, &#39;element&#39;: 1, &#39;employs&#39;: 1, &#39;trees&#39;: 1, &#39;each&#39;: 1, &#39;hollow&#39;: 1, &#39;trunk&#39;: 1, &#39;hermit&#39;: 1, &#39;crucifix&#39;: 1, &#39;within&#39;: 1, &#39;sleeps&#39;: 1, &#39;meadow&#39;: 1, &#39;sleep&#39;: 1, &#39;cattle&#39;: 1, &#39;cottage&#39;: 1, &#39;goes&#39;: 1, &#39;sleepy&#39;: 1, &#39;smoke&#39;: 1, &#39;Deep&#39;: 1, &#39;distant&#39;: 1, &#39;woodlands&#39;: 1, &#39;winds&#39;: 1, &#39;mazy&#39;: 1, &#39;reaching&#39;: 1, &#39;overlapping&#39;: 1, &#39;spurs&#39;: 1, &#39;mountains&#39;: 1, &#39;bathed&#39;: 1, &#39;hillside&#39;: 1, &#39;blue&#39;: 1, &#39;though&#39;: 2, &#39;picture&#39;: 1, &#39;lies&#39;: 1, &#39;thus&#39;: 1, &#39;tranced&#39;: 1, &#39;pinetree&#39;: 1, &#39;shakes&#39;: 1, &#39;its&#39;: 1, &#39;sighs&#39;: 1, &#39;shepherd’s&#39;: 2, &#39;head&#39;: 1, &#39;yet&#39;: 1, &#39;vain&#39;: 1, &#39;unless&#39;: 1, &#39;eye&#39;: 1, &#39;him&#39;: 3, &#39;visit&#39;: 1, &#39;Prairies&#39;: 1, &#39;June&#39;: 1, &#39;when&#39;: 2, &#39;scores&#39;: 2, &#39;wade&#39;: 1, &#39;kneedeep&#39;: 1, &#39;among&#39;: 1, &#39;Tigerlilies&#39;: 1, &#39;what&#39;: 1, &#39;charm&#39;: 1, &#39;wanting&#39;: 1, &#39;Water&#39;: 1, &#39;drop&#39;: 1, &#39;Were&#39;: 1, &#39;Niagara&#39;: 1, &#39;cataract&#39;: 1, &#39;sand&#39;: 1, &#39;travel&#39;: 1, &#39;thousand&#39;: 1, &#39;Why&#39;: 5, &#39;did&#39;: 4, &#39;poor&#39;: 1, &#39;poet&#39;: 1, &#39;Tennessee&#39;: 1, &#39;suddenly&#39;: 1, &#39;receiving&#39;: 1, &#39;two&#39;: 1, &#39;handfuls&#39;: 1, &#39;silver&#39;: 1, &#39;deliberate&#39;: 1, &#39;whether&#39;: 1, &#39;buy&#39;: 1, &#39;coat&#39;: 1, &#39;sadly&#39;: 1, &#39;needed&#39;: 1, &#39;invest&#39;: 1, &#39;pedestrian&#39;: 1, &#39;trip&#39;: 1, &#39;Rockaway&#39;: 1, &#39;Beach&#39;: 1, &#39;robust&#39;: 2, &#39;healthy&#39;: 2, &#39;boy&#39;: 1, &#39;crazy&#39;: 1, &#39;go&#39;: 1, &#39;first&#39;: 2, &#39;voyage&#39;: 1, &#39;passenger&#39;: 1, &#39;yourself&#39;: 1, &#39;feel&#39;: 1, &#39;mystical&#39;: 1, &#39;vibration&#39;: 1, &#39;told&#39;: 1, &#39;old&#39;: 1, &#39;Persians&#39;: 1, &#39;hold&#39;: 1, &#39;holy&#39;: 1, &#39;Greeks&#39;: 1, &#39;give&#39;: 1, &#39;separate&#39;: 1, &#39;deity&#39;: 1, &#39;own&#39;: 1, &#39;brother&#39;: 1, &#39;Jove&#39;: 1, &#39;Surely&#39;: 1, &#39;meaning&#39;: 2, &#39;deeper&#39;: 1, &#39;story&#39;: 1, &#39;Narcissus&#39;: 1, &#39;who&#39;: 1, &#39;because&#39;: 1, &#39;could&#39;: 1, &#39;grasp&#39;: 1, &#39;tormenting&#39;: 1, &#39;mild&#39;: 1, &#39;image&#39;: 3, &#39;saw&#39;: 1, &#39;fountain&#39;: 1, &#39;was&#39;: 1, &#39;drowned&#39;: 1, &#39;we&#39;: 1, &#39;ourselves&#39;: 1, &#39;rivers&#39;: 1, &#39;oceans&#39;: 1, &#39;ungraspable&#39;: 1, &#39;phantom&#39;: 1, &#39;life&#39;: 1, &#39;key&#39;: 1}
 </pre></div>
 </div>
 </div>
 </div>
+</section>
+<section id="example-3-functions">
+<h3><span class="section-number">2.1.3. </span>Example 3) Functions<a class="headerlink" href="#example-3-functions" title="Permalink to this headline">#</a></h3>
+<p>We will define a function that can read and write a file.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Conditionals</span>
-<span class="n">random_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">1.5</span><span class="p">,</span><span class="mf">2.3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We will extract important information from a complicated text file.</span>
+<span class="c1"># It is a quantum calculation output file from a software package.</span>
 
-<span class="n">small</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">medium</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">large</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">def</span> <span class="nf">parse_output</span><span class="p">(</span><span class="n">input_name</span><span class="p">,</span> <span class="n">output_name</span><span class="p">):</span>
+    <span class="n">energies</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">input_name</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_obj</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f_obj</span><span class="p">:</span>
+            <span class="k">if</span> <span class="s1">&#39;FINAL ENERGY&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
+                <span class="n">energies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">2</span><span class="p">]))</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_name</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_obj</span><span class="p">:</span>
+        <span class="n">f_obj</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Iterations    Energy </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">energy</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">energies</span><span class="p">):</span>
+            <span class="n">line</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%12s</span><span class="s1"> </span><span class="si">%12.5f</span><span class="s1"> </span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="s1">&#39;Iteration </span><span class="si">%i</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">i</span>, energy)#&#39;Iteration %i&#39; %i + &#39;    &#39; + str(energy) + &#39;\n&#39;
+            <span class="n">f_obj</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">energies</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">random_array</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">8</span><span class="p">:</span>
-        <span class="n">large</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">4</span><span class="p">:</span>
-        <span class="n">small</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">medium</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">small</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">medium</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">large</span><span class="p">)</span>
+<span class="n">energies</span> <span class="o">=</span> <span class="n">parse_output</span><span class="p">(</span><span class="s1">&#39;../data/file_example3.out&#39;</span><span class="p">,</span><span class="s1">&#39;../data/energies.txt&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2.0, 3.0, 3.0, 1.0, 1.5, 2.3]
-[7.0, 6.0, 8.0, 5.0, 4.0, 4.0, 6.0, 10.0, 11.0]
-[8.0, 10.0, 11.0]
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mi">663</span><span class="n">c93cfc169</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span>     <span class="k">return</span> <span class="n">energies</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> 
+<span class="ne">---&gt; </span><span class="mi">17</span> <span class="n">energies</span> <span class="o">=</span> <span class="n">parse_output</span><span class="p">(</span><span class="s1">&#39;../data/file_example3.out&#39;</span><span class="p">,</span><span class="s1">&#39;../data/energies.txt&#39;</span><span class="p">)</span>
+
+<span class="nn">&lt;ipython-input-6-663c93cfc169&gt;</span> in <span class="ni">parse_output</span><span class="nt">(input_name, output_name)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">def</span> <span class="nf">parse_output</span><span class="p">(</span><span class="n">input_name</span><span class="p">,</span> <span class="n">output_name</span><span class="p">):</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">energies</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="ne">----&gt; </span><span class="mi">6</span>     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">input_name</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_obj</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span>         <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f_obj</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>             <span class="k">if</span> <span class="s1">&#39;FINAL ENERGY&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../data/file_example3.out&#39;
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plotting</span>
-
-<span class="n">year</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">expenses</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">profit</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;finances.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">infile</span><span class="p">:</span>
-    <span class="n">head</span> <span class="o">=</span> <span class="n">infile</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
-    <span class="c1">#print(head)</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">infile</span><span class="p">:</span>
-        <span class="n">y</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-        <span class="n">year</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
-        <span class="n">expenses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
-        <span class="n">profit</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">p</span><span class="p">))</span>
-<span class="c1">#print(year)</span>
-<span class="c1">#print(expenses)</span>
-<span class="c1">#print(profit)</span>
-<span class="n">gross</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">profit</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">expenses</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">gross</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Gross&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">profit</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Profit&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">expenses</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;expenses&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Gross Income Over time&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">16</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Gross Income&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mi">1990</span><span class="p">,</span> <span class="mi">2010</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">200000</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/02_Day1-Lecture-2_6_0.png" src="../_images/02_Day1-Lecture-2_6_0.png" />
-</div>
-</div>
+</section>
 </section>
 </section>
 
@@ -574,7 +646,7 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">1. </span><strong>Day 1</strong></p>
+            <p class="prev-next-title"><span class="section-number">1. </span><strong>Day 1</strong> - Lecture 1</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="04_Day2-Lecture-1.html" title="next page">
