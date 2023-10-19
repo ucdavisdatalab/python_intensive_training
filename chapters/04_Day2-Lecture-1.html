@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2. Basic NumPy &#8212; Python Intensive Training</title>
+    <title>3. Day 2 &#8212; Python Intensive Training</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6. Day 2 Homework" href="05_Day2-Lecture-2.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="02_Day1-Lecture-2.html" />
+    <link rel="next" title="4. Day 2 Homework" href="05_Day2-Lecture-2.html" />
+    <link rel="prev" title="2. Day 1" href="02_Day1-Lecture-2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -123,14 +123,25 @@ const thebe_selector_output = ".output, .cell_output"
    </strong>
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_Day1-Lecture-2.html">
+   2.
+   <strong>
+    Day 1
+   </strong>
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   2. Basic NumPy
+   3.
+   <strong>
+    Day 2
+   </strong>
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="05_Day2-Lecture-2.html">
-   6.
+   4.
    <strong>
     Day 2 Homework
    </strong>
@@ -342,24 +353,27 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   2. Basic NumPy
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-numpy">
+   3.1.
+   <strong>
+    Basic NumPy
+   </strong>
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#basic-pandas">
-   3. Basic Pandas
+   3.2. Basic Pandas
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#clear-example-of-dataframe">
-   4. Clear example of DataFrame
+   3.3. Clear example of DataFrame
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-are-they-made">
-   5. How are they made?
+   3.4. How are they made?
   </a>
  </li>
 </ul>
@@ -371,7 +385,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Basic NumPy</h1>
+                <h1>Day 2</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -381,24 +395,27 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   2. Basic NumPy
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-numpy">
+   3.1.
+   <strong>
+    Basic NumPy
+   </strong>
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#basic-pandas">
-   3. Basic Pandas
+   3.2. Basic Pandas
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#clear-example-of-dataframe">
-   4. Clear example of DataFrame
+   3.3. Clear example of DataFrame
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-are-they-made">
-   5. How are they made?
+   3.4. How are they made?
   </a>
  </li>
 </ul>
@@ -411,9 +428,10 @@ title="Print to PDF"
                 
               <div>
                 
-  <p>#<strong>Day 2</strong></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="day-2">
+<h1><span class="section-number">3. </span><strong>Day 2</strong><a class="headerlink" href="#day-2" title="Permalink to this headline">#</a></h1>
 <section id="basic-numpy">
-<h1><span class="section-number">2. </span>Basic NumPy<a class="headerlink" href="#basic-numpy" title="Permalink to this headline">#</a></h1>
+<h2><span class="section-number">3.1. </span><strong>Basic NumPy</strong><a class="headerlink" href="#basic-numpy" title="Permalink to this headline">#</a></h2>
 <p>Numpy is a mathematical based library with extra capabilities. Libraries are “add-ons” developed by other programmers. They add extra functions and capabilities.</p>
 <ol class="simple">
 <li><p>Getting started</p></li>
@@ -579,7 +597,7 @@ cross product:
 </div>
 </section>
 <section id="basic-pandas">
-<h1><span class="section-number">3. </span>Basic Pandas<a class="headerlink" href="#basic-pandas" title="Permalink to this headline">#</a></h1>
+<h2><span class="section-number">3.2. </span>Basic Pandas<a class="headerlink" href="#basic-pandas" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Pandas is a library</p>
 <ul>
@@ -594,7 +612,7 @@ cross product:
 </ul>
 </section>
 <section id="clear-example-of-dataframe">
-<h1><span class="section-number">4. </span>Clear example of DataFrame<a class="headerlink" href="#clear-example-of-dataframe" title="Permalink to this headline">#</a></h1>
+<h2><span class="section-number">3.3. </span>Clear example of DataFrame<a class="headerlink" href="#clear-example-of-dataframe" title="Permalink to this headline">#</a></h2>
 <p><img alt="alt text" src="../_images/day_3_lecture_1_image_1.png" /></p>
 <ul class="simple">
 <li><p>Attributes</p>
@@ -612,7 +630,7 @@ cross product:
 </ul>
 </section>
 <section id="how-are-they-made">
-<h1><span class="section-number">5. </span>How are they made?<a class="headerlink" href="#how-are-they-made" title="Permalink to this headline">#</a></h1>
+<h2><span class="section-number">3.4. </span>How are they made?<a class="headerlink" href="#how-are-they-made" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>They are declared</p></li>
 <li><p>The information comes from</p>
@@ -803,6 +821,7 @@ the min value is: 2
 </div>
 </div>
 </section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -835,13 +854,13 @@ the min value is: 2
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">&lt;no title&gt;</p>
+            <p class="prev-next-title"><span class="section-number">2. </span><strong>Day 1</strong></p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="05_Day2-Lecture-2.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6. </span><strong>Day 2 Homework</strong></p>
+        <p class="prev-next-title"><span class="section-number">4. </span><strong>Day 2 Homework</strong></p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
