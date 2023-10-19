@@ -17,18 +17,25 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-array3 = np.array([3,2,5,4,4])
+Dimport matplotlib.pyplot as plt
 
-print(array3 + array1)
+x_vals = []
+y_vals = []
+with open('Day1example.txt', 'r') as infile:
+    headers = infile.readline()
+    #print(headers)
+    for line in infile:
+        x_vals.append(float(line.split()[0]))
+        y_vals.append(float(line.split()[1]))
+
+plt.scatter(x_vals, y_vals)
+plt.show()
 ------------------
 
-[0;31m---------------------------------------------------------------------------[0m
-[0;31mValueError[0m                                Traceback (most recent call last)
-[0;32m<ipython-input-14-96c072ca3237>[0m in [0;36m<module>[0;34m[0m
-[1;32m      1[0m [0marray3[0m [0;34m=[0m [0mnp[0m[0;34m.[0m[0marray[0m[0;34m([0m[0;34m[[0m[0;36m3[0m[0;34m,[0m[0;36m2[0m[0;34m,[0m[0;36m5[0m[0;34m,[0m[0;36m4[0m[0;34m,[0m[0;36m4[0m[0;34m][0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      2[0m [0;34m[0m[0m
-[0;32m----> 3[0;31m [0mprint[0m[0;34m([0m[0marray3[0m [0;34m+[0m [0marray1[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m
-[0;31mValueError[0m: operands could not be broadcast together with shapes (5,) (8,) 
-ValueError: operands could not be broadcast together with shapes (5,) (8,) 
+[0;36m  File [0;32m"<ipython-input-1-c87934b48306>"[0;36m, line [0;32m1[0m
+[0;31m    Dimport matplotlib.pyplot as plt[0m
+[0m            ^[0m
+[0;31mSyntaxError[0m[0;31m:[0m invalid syntax
+
+SyntaxError: invalid syntax (<ipython-input-1-c87934b48306>, line 1)
 
