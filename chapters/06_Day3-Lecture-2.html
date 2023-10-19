@@ -1,61 +1,49 @@
 
-
 <!DOCTYPE html>
 
-
-<html lang="en" >
-
+<html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>6. Day 3 &#8212; Python Intensive Training</title>
-  
-  
-  
-  <script data-cfasync="false">
-    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
-  </script>
-  
+    
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
-  
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-  
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -63,102 +51,61 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/06_Day3-Lecture-2';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="7. Day 3 Homework" href="07_Day3-Homework.html" />
     <link rel="prev" title="5. Day 3" href="05_Day3-Lecture-1.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
 
-  
-  
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <div id="pst-scroll-pixel-helper"></div>
+    
+    <div class="container-fluid" id="banner"></div>
 
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    
 
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
-<form class="bd-search d-flex align-items-center"
-      action="../search.html"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search this book..."
-         aria-label="Search this book..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
-  
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
-  
-  <div class="bd-container">
-    <div class="bd-container__inner bd-page-width">
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
         
-
-  
-  <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-    
-    
-  </div>
-  
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item">
-  
-
-<a class="navbar-brand logo" href="index.html">
-  
-  
-  
-  
-    
-    
       
-    
-    
-    <img src="../_static/datalab-logo-full-color-rgb-1.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/datalab-logo-full-color-rgb-1.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
-  
-  
-</a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item navbar-nav active">
+      
+      <img src="../_static/datalab-logo-full-color-rgb-1.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Python Intensive Training</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -168,262 +115,605 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="01_Day1-Lecture.html">1. <strong>Day 1</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="02_Day1-Homework.html">2. <strong>Day 1 Homework</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="03_Day2-Lecture.html">3. <strong>Day 2</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="04_Day2-Homework.html">4. <strong>Day 2 Homework</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="05_Day3-Lecture-1.html">5. <strong>Day 3</strong></a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. <strong>Day 3</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="07_Day3-Homework.html">7. <strong>Day 3 Homework</strong></a></li>
-
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_Day1-Lecture.html">
+   1.
+   <strong>
+    Day 1
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_Day1-Homework.html">
+   2.
+   <strong>
+    Day 1 Homework
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_Day2-Lecture.html">
+   3.
+   <strong>
+    Day 2
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_Day2-Homework.html">
+   4.
+   <strong>
+    Day 2 Homework
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_Day3-Lecture-1.html">
+   5.
+   <strong>
+    Day 3
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   6.
+   <strong>
+    Day 3
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07_Day3-Homework.html">
+   7.
+   <strong>
+    Day 3 Homework
+   </strong>
+  </a>
+ </li>
 </ul>
 
     </div>
 </nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
     </div>
-  
-  
-  <div class="sidebar-primary-items__end sidebar-primary__section">
-  </div>
-  
-  <div id="rtd-footer-container"></div>
+    <div id="rtd-footer-container"></div>
+</div>
 
 
-      </div>
-      
-      <main id="main-content" class="bd-main">
-        
-        
+          
 
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
 
-          <div class="bd-content">
-            <div class="bd-article-container">
-              
-              <div class="bd-header-article">
-<div class="header-article-items header-article__inner">
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
   
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <span class="fa-solid fa-bars"></span>
-</label></div>
-      
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
     </div>
-  
-  
-    <div class="header-article-items__end">
-      
-        <div class="header-article-item">
-
-<div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-source-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
   </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://github.com/ucdavisdatalab/python_intensive_training" target="_blank"
-   class="btn btn-sm btn-source-repository-button dropdown-item"
-   title="Source repository"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="btn__text-container">Repository</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/ucdavisdatalab/python_intensive_training/issues/new?title=Issue%20on%20page%20%2Fchapters/06_Day3-Lecture-2.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm btn-source-issues-button dropdown-item"
-   title="Open an issue"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="btn__text-container">Open issue</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-
-
-<div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
-    <i class="fas fa-download"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="../_sources/chapters/06_Day3-Lecture-2.ipynb" target="_blank"
-   class="btn btn-sm btn-download-source-button dropdown-item"
-   title="Download source file"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="btn__text-container">.ipynb</span>
-</a>
-</li>
-      
-      
-      
-      
+  <div class="menu-dropdown__content">
+    <ul>
       <li>
-<button onclick="window.print()"
-  class="btn btn-sm btn-download-pdf-button dropdown-item"
-  title="Print to PDF"
-  data-bs-placement="left" data-bs-toggle="tooltip"
+        <a href="https://mybinder.org/v2/gh/ucdavisdatalab/python_intensive_training/master?urlpath=tree/docs/chapters/06_Day3-Lecture-2.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
 >
   
 
-<span class="btn__icon-container">
-  <i class="fas fa-file-pdf"></i>
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
   </span>
-<span class="btn__text-container">.pdf</span>
-</button>
-</li>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
       
-  </ul>
+    </ul>
+  </div>
 </div>
-
-
-
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
-  title="Fullscreen mode"
-  data-bs-placement="bottom" data-bs-toggle="tooltip"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
 >
   
 
-<span class="btn__icon-container">
+<span class="headerbtn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
   </button>
-`);
-</script>
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
-</div></div>
-      
-    </div>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/ucdavisdatalab/python_intensive_training"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
   
-</div>
-</div>
-              
-              
 
-<div id="jb-print-docs-body" class="onlyprint">
-    <h1>Day 3</h1>
-    <!-- Table of contents -->
-    <div id="print-main-content">
-        <div id="jb-print-toc">
-            
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals-anti-goals">6.1. Goals/Anti-goals</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#roadmap">6.2. Roadmap</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-obtain-dataset-from-the-internet">6.3. A) Obtain dataset from the internet</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#description">6.3.1. Description:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#image-of-dataset">6.3.2. Image of dataset:</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-prepare-dataset-for-analysis-using-pandas">6.4. B) Prepare dataset for analysis using pandas</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overall-strategy">6.4.1. Overall Strategy</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#get-dataset-into-python">6.4.2. 0) Get dataset into python</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deal-with-missing-data-drop-column">6.4.3. 1) Deal with missing data (drop column)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transform-letters-into-numbers">6.4.4. 2) Transform letters into numbers</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#background-clustering">6.4.4.1. Background: clustering</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#image">6.4.4.2. Image</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#one-hot-encoding">6.4.4.3. One-hot encoding</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">6.4.4.4. image</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#code">6.4.4.5. Code</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-cluster-the-data-with-sklearn">6.5. C) Cluster the data with sklearn</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#background">6.5.1. Background:</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#image-black-box">6.5.1.1. Image: Black box</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#giving-parameters-to-k-means-black-box">6.5.1.2. Giving parameters to K-means black box</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#black-box-operation">6.5.1.3. Black Box Operation</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#done">6.5.1.4. Done?</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensionality-reduction-and-visualization">6.6. Dimensionality Reduction and Visualization</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#naive-approach">6.6.1. Naive approach:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#which-algorithm">6.6.2. Which algorithm?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strategy">6.6.3. Strategy</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">6.6.4. Code</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#observations">6.6.5. Observations</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-dim-reduction-with-pca">6.6.6. Bonus: Dim Reduction with PCA</a></li>
-</ul>
-</li>
-</ul>
-            </nav>
-        </div>
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/ucdavisdatalab/python_intensive_training/issues/new?title=Issue%20on%20page%20%2Fchapters/06_Day3-Lecture-2.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/chapters/06_Day3-Lecture-2.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-              
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#goals-anti-goals">
+   6.1. Goals/Anti-goals
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#roadmap">
+   6.2. Roadmap
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-obtain-dataset-from-the-internet">
+   6.3. A) Obtain dataset from the internet
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#description">
+     6.3.1. Description:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#image-of-dataset">
+     6.3.2. Image of dataset:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#b-prepare-dataset-for-analysis-using-pandas">
+   6.4. B) Prepare dataset for analysis using pandas
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#overall-strategy">
+     6.4.1. Overall Strategy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-dataset-into-python">
+     6.4.2. 0) Get dataset into python
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#deal-with-missing-data-drop-column">
+     6.4.3. 1) Deal with missing data (drop column)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#transform-letters-into-numbers">
+     6.4.4. 2) Transform letters into numbers
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#background-clustering">
+       6.4.4.1. Background: clustering
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#image">
+       6.4.4.2. Image
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#one-hot-encoding">
+       6.4.4.3. One-hot encoding
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       6.4.4.4. image
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#code">
+       6.4.4.5. Code
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#c-cluster-the-data-with-sklearn">
+   6.5. C) Cluster the data with sklearn
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#background">
+     6.5.1. Background:
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#image-black-box">
+       6.5.1.1. Image: Black box
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#giving-parameters-to-k-means-black-box">
+       6.5.1.2. Giving parameters to K-means black box
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#black-box-operation">
+       6.5.1.3. Black Box Operation
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#done">
+       6.5.1.4. Done?
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dimensionality-reduction-and-visualization">
+   6.6. Dimensionality Reduction and Visualization
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#naive-approach">
+     6.6.1. Naive approach:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#which-algorithm">
+     6.6.2. Which algorithm?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#strategy">
+     6.6.3. Strategy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     6.6.4. Code
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#observations">
+     6.6.5. Observations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bonus-dim-reduction-with-pca">
+     6.6.6. Bonus: Dim Reduction with PCA
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Day 3</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#goals-anti-goals">
+   6.1. Goals/Anti-goals
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#roadmap">
+   6.2. Roadmap
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-obtain-dataset-from-the-internet">
+   6.3. A) Obtain dataset from the internet
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#description">
+     6.3.1. Description:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#image-of-dataset">
+     6.3.2. Image of dataset:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#b-prepare-dataset-for-analysis-using-pandas">
+   6.4. B) Prepare dataset for analysis using pandas
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#overall-strategy">
+     6.4.1. Overall Strategy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-dataset-into-python">
+     6.4.2. 0) Get dataset into python
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#deal-with-missing-data-drop-column">
+     6.4.3. 1) Deal with missing data (drop column)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#transform-letters-into-numbers">
+     6.4.4. 2) Transform letters into numbers
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#background-clustering">
+       6.4.4.1. Background: clustering
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#image">
+       6.4.4.2. Image
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#one-hot-encoding">
+       6.4.4.3. One-hot encoding
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       6.4.4.4. image
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#code">
+       6.4.4.5. Code
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#c-cluster-the-data-with-sklearn">
+   6.5. C) Cluster the data with sklearn
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#background">
+     6.5.1. Background:
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#image-black-box">
+       6.5.1.1. Image: Black box
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#giving-parameters-to-k-means-black-box">
+       6.5.1.2. Giving parameters to K-means black box
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#black-box-operation">
+       6.5.1.3. Black Box Operation
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#done">
+       6.5.1.4. Done?
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dimensionality-reduction-and-visualization">
+   6.6. Dimensionality Reduction and Visualization
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#naive-approach">
+     6.6.1. Naive approach:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#which-algorithm">
+     6.6.2. Which algorithm?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#strategy">
+     6.6.3. Strategy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     6.6.4. Code
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#observations">
+     6.6.5. Observations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bonus-dim-reduction-with-pca">
+     6.6.6. Bonus: Dim Reduction with PCA
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
                 
-<div id="searchbox"></div>
-                <article class="bd-article" role="main">
-                  
+              <div>
+                
   <section class="tex2jax_ignore mathjax_ignore" id="day-3">
-<h1><span class="section-number">6. </span><strong>Day 3</strong><a class="headerlink" href="#day-3" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">6. </span><strong>Day 3</strong><a class="headerlink" href="#day-3" title="Permalink to this headline">#</a></h1>
 <section id="goals-anti-goals">
-<h2><span class="section-number">6.1. </span>Goals/Anti-goals<a class="headerlink" href="#goals-anti-goals" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.1. </span>Goals/Anti-goals<a class="headerlink" href="#goals-anti-goals" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><strong>Goal</strong>: Provide a tour of several different libraries</p></li>
 <li><p><strong>Goal</strong>: Demonstrate the synergy of the “Python Universe”</p></li>
@@ -434,16 +724,16 @@ document.write(`
 </ul>
 </section>
 <section id="roadmap">
-<h2><span class="section-number">6.2. </span>Roadmap<a class="headerlink" href="#roadmap" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.2. </span>Roadmap<a class="headerlink" href="#roadmap" title="Permalink to this headline">#</a></h2>
 <p>A) Obtain dataset from the internet</p>
 <p>B) Prepare dataset for analysis with <em>pandas</em></p>
 <p>C) Cluster dataset with <em>sklearn</em></p>
 <p>D) Dimensionality reduction with <em>UMAP</em>, visualization with <em>matplotlib</em></p>
 </section>
 <section id="a-obtain-dataset-from-the-internet">
-<h2><span class="section-number">6.3. </span>A) Obtain dataset from the internet<a class="headerlink" href="#a-obtain-dataset-from-the-internet" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.3. </span>A) Obtain dataset from the internet<a class="headerlink" href="#a-obtain-dataset-from-the-internet" title="Permalink to this headline">#</a></h2>
 <section id="description">
-<h3><span class="section-number">6.3.1. </span>Description:<a class="headerlink" href="#description" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.3.1. </span>Description:<a class="headerlink" href="#description" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>23 species</p></li>
 <li><p>Coincidentally 23 features (columns)</p></li>
@@ -452,27 +742,27 @@ document.write(`
 </ul>
 </section>
 <section id="image-of-dataset">
-<h3><span class="section-number">6.3.2. </span>Image of dataset:<a class="headerlink" href="#image-of-dataset" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.3.2. </span>Image of dataset:<a class="headerlink" href="#image-of-dataset" title="Permalink to this headline">#</a></h3>
 <p><img alt="alt text" src="../_images/day_3_lecture_2_image_1.png" /></p>
 </section>
 </section>
 <section id="b-prepare-dataset-for-analysis-using-pandas">
-<h2><span class="section-number">6.4. </span>B) Prepare dataset for analysis using pandas<a class="headerlink" href="#b-prepare-dataset-for-analysis-using-pandas" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.4. </span>B) Prepare dataset for analysis using pandas<a class="headerlink" href="#b-prepare-dataset-for-analysis-using-pandas" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>pandas</p></li>
 <li><p>library in python</p></li>
 <li><p>perfect for matrix-like data of mixed types (numbers, strings, etc.)</p></li>
 </ul>
 <section id="overall-strategy">
-<h3><span class="section-number">6.4.1. </span>Overall Strategy<a class="headerlink" href="#overall-strategy" title="Permalink to this heading">#</a></h3>
-<ol class="arabic simple" start="0">
+<h3><span class="section-number">6.4.1. </span>Overall Strategy<a class="headerlink" href="#overall-strategy" title="Permalink to this headline">#</a></h3>
+<ol class="simple">
 <li><p>Get dataset into python. Here is the <a class="reference external" href="https://raw.githubusercontent.com/ucdavisdatalab/python_intensive_training/main/data/agaricus-lepiota.csv">mushroom csv file</a></p></li>
 <li><p>Deal with missing data (drop column)</p></li>
 <li><p>Transform letters into numbers (one-hot encoding)</p></li>
 </ol>
 </section>
 <section id="get-dataset-into-python">
-<h3><span class="section-number">6.4.2. </span>0) Get dataset into python<a class="headerlink" href="#get-dataset-into-python" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.4.2. </span>0) Get dataset into python<a class="headerlink" href="#get-dataset-into-python" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>get pandas library</p></li>
 <li><p>get a hard coded address for the file</p></li>
@@ -1145,7 +1435,7 @@ document.write(`
 </div>
 </section>
 <section id="deal-with-missing-data-drop-column">
-<h3><span class="section-number">6.4.3. </span>1) Deal with missing data (drop column)<a class="headerlink" href="#deal-with-missing-data-drop-column" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.4.3. </span>1) Deal with missing data (drop column)<a class="headerlink" href="#deal-with-missing-data-drop-column" title="Permalink to this headline">#</a></h3>
 <p>We need a fast and clear approach</p>
 <ul class="simple">
 <li><p>use the function DataFrame.drop</p></li>
@@ -1483,31 +1773,31 @@ document.write(`
 </div>
 </section>
 <section id="transform-letters-into-numbers">
-<h3><span class="section-number">6.4.4. </span>2) Transform letters into numbers<a class="headerlink" href="#transform-letters-into-numbers" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.4.4. </span>2) Transform letters into numbers<a class="headerlink" href="#transform-letters-into-numbers" title="Permalink to this headline">#</a></h3>
 <p>Why?</p>
 <section id="background-clustering">
-<h4><span class="section-number">6.4.4.1. </span>Background: clustering<a class="headerlink" href="#background-clustering" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">6.4.4.1. </span>Background: clustering<a class="headerlink" href="#background-clustering" title="Permalink to this headline">#</a></h4>
 <p>8,124 samples -&gt; which samples come from the same species?</p>
 <p>Clustering: Group datapoints based on location</p>
 </section>
 <section id="image">
-<h4><span class="section-number">6.4.4.2. </span>Image<a class="headerlink" href="#image" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">6.4.4.2. </span>Image<a class="headerlink" href="#image" title="Permalink to this headline">#</a></h4>
 <p>source:: <a class="reference external" href="https://miro.medium.com/max/1200/1*rw8IUza1dbffBhiA4i0GNQ.png">https://miro.medium.com/max/1200/1*rw8IUza1dbffBhiA4i0GNQ.png</a></p>
 <p><img alt="alt text" src="../_images/day_3_lecture_2_image_2.png" /></p>
 </section>
 <section id="one-hot-encoding">
-<h4><span class="section-number">6.4.4.3. </span>One-hot encoding<a class="headerlink" href="#one-hot-encoding" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">6.4.4.3. </span>One-hot encoding<a class="headerlink" href="#one-hot-encoding" title="Permalink to this headline">#</a></h4>
 <p>To cluster, we need to put data points in spatial locations</p>
 <p>Right now each datapoint has 23 letters</p>
 <p>We use the strategy of “one-hot encoding”</p>
 </section>
 <section id="id1">
-<h4><span class="section-number">6.4.4.4. </span>image<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">6.4.4.4. </span>image<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h4>
 <p>source: <a class="reference external" href="https://miro.medium.com/max/875/1*ggtP4a5YaRx6l09KQaYOnw.png">https://miro.medium.com/max/875/1*ggtP4a5YaRx6l09KQaYOnw.png</a></p>
 <p><img alt="alt text" src="../_images/day_3_lecture_2_image_3.png" /></p>
 </section>
 <section id="code">
-<h4><span class="section-number">6.4.4.5. </span>Code<a class="headerlink" href="#code" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">6.4.4.5. </span>Code<a class="headerlink" href="#code" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># one hot encoding</span>
@@ -1571,123 +1861,123 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
       <td>...</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
       <td>...</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>True</td>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
       <td>...</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
       <td>...</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
       <td>...</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>...</th>
@@ -1715,123 +2005,123 @@ document.write(`
     </tr>
     <tr>
       <th>8119</th>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
       <td>...</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>8120</th>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
       <td>...</td>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>8121</th>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
       <td>...</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>8122</th>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
       <td>...</td>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>8123</th>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
       <td>...</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
@@ -1842,15 +2132,15 @@ document.write(`
 </section>
 </section>
 <section id="c-cluster-the-data-with-sklearn">
-<h2><span class="section-number">6.5. </span>C) Cluster the data with sklearn<a class="headerlink" href="#c-cluster-the-data-with-sklearn" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.5. </span>C) Cluster the data with sklearn<a class="headerlink" href="#c-cluster-the-data-with-sklearn" title="Permalink to this headline">#</a></h2>
 <section id="background">
-<h3><span class="section-number">6.5.1. </span>Background:<a class="headerlink" href="#background" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.5.1. </span>Background:<a class="headerlink" href="#background" title="Permalink to this headline">#</a></h3>
 <p>In the above image, data had 2 dimensions so we could visually assess clustering</p>
 <p>For n-dimensional case We turn to a clustering algorithm.</p>
 <p>Within sklearn we choose the algorithm K-means.</p>
 <p>Because time constraints we treat KMeans like a black box</p>
 <section id="image-black-box">
-<h4><span class="section-number">6.5.1.1. </span>Image: Black box<a class="headerlink" href="#image-black-box" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">6.5.1.1. </span>Image: Black box<a class="headerlink" href="#image-black-box" title="Permalink to this headline">#</a></h4>
 <p>Black box: give input, get output, dont ask how</p>
 <p>Step 1)</p>
 <ul class="simple">
@@ -1864,21 +2154,11 @@ document.write(`
 <p><img alt="alt text" src="../_images/day_3_lecture_2_image_4.png" /></p>
 </section>
 <section id="giving-parameters-to-k-means-black-box">
-<h4><span class="section-number">6.5.1.2. </span>Giving parameters to K-means black box<a class="headerlink" href="#giving-parameters-to-k-means-black-box" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">6.5.1.2. </span>Giving parameters to K-means black box<a class="headerlink" href="#giving-parameters-to-k-means-black-box" title="Permalink to this headline">#</a></h4>
 <p>KMeans <em>requires</em> the number of clusters (23)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
 </pre></div>
 </div>
 </div>
@@ -1914,7 +2194,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">39</span><span class="o">-</span><span class="mi">9</span><span class="n">d53e9cea4d7</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">13</span><span class="o">-</span><span class="mi">9</span><span class="n">d53e9cea4d7</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#we havent told my_KMeans_tool about our data yet, so we expect this to fail</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">my_KMeans_tool</span><span class="o">.</span><span class="n">labels_</span><span class="p">)</span>
 
@@ -1925,7 +2205,7 @@ document.write(`
 </div>
 </section>
 <section id="black-box-operation">
-<h4><span class="section-number">6.5.1.3. </span>Black Box Operation<a class="headerlink" href="#black-box-operation" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">6.5.1.3. </span>Black Box Operation<a class="headerlink" href="#black-box-operation" title="Permalink to this headline">#</a></h4>
 <p>sklearn (often) relies on the function “fit_transform” to connect the data with the algorithm</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1971,7 +2251,7 @@ document.write(`
 </div>
 </section>
 <section id="done">
-<h4><span class="section-number">6.5.1.4. </span>Done?<a class="headerlink" href="#done" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">6.5.1.4. </span>Done?<a class="headerlink" href="#done" title="Permalink to this headline">#</a></h4>
 <p>Got a label for every data point.</p>
 <p>Philosophical viewpoint: We did perfectly, the algorithm worked exactly as intended</p>
 <p>Are our clusters meaningful?</p>
@@ -1988,19 +2268,19 @@ document.write(`
 </section>
 </section>
 <section id="dimensionality-reduction-and-visualization">
-<h2><span class="section-number">6.6. </span>Dimensionality Reduction and Visualization<a class="headerlink" href="#dimensionality-reduction-and-visualization" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.6. </span>Dimensionality Reduction and Visualization<a class="headerlink" href="#dimensionality-reduction-and-visualization" title="Permalink to this headline">#</a></h2>
 <section id="naive-approach">
-<h3><span class="section-number">6.6.1. </span>Naive approach:<a class="headerlink" href="#naive-approach" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.6.1. </span>Naive approach:<a class="headerlink" href="#naive-approach" title="Permalink to this headline">#</a></h3>
 <p>choose two columns and drop all of the rest</p>
 </section>
 <section id="which-algorithm">
-<h3><span class="section-number">6.6.2. </span>Which algorithm?<a class="headerlink" href="#which-algorithm" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.6.2. </span>Which algorithm?<a class="headerlink" href="#which-algorithm" title="Permalink to this headline">#</a></h3>
 <p>PCA, PLS-DA, t-SNE, UMAP</p>
 <p>demonstrate the bredth/synergy of the python language, so we choose UMAP (not in sklearn)</p>
 <p>Even though UMAP is not in sklearn, the authors of UMAP wrote it in such a way that it “works like” sklearn functions.</p>
 </section>
 <section id="strategy">
-<h3><span class="section-number">6.6.3. </span>Strategy<a class="headerlink" href="#strategy" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.6.3. </span>Strategy<a class="headerlink" href="#strategy" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>create our UMAP black box</p></li>
 <li><p>operate that black box on our dataset</p></li>
@@ -2009,7 +2289,7 @@ document.write(`
 </ul>
 </section>
 <section id="id2">
-<h3><span class="section-number">6.6.4. </span>Code<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.6.4. </span>Code<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create our black box</span>
@@ -2099,7 +2379,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/0a532cbd7336d09adc184387a8f4b5c6c38c889328389f33400a1fcc95b59500.png" src="../_images/0a532cbd7336d09adc184387a8f4b5c6c38c889328389f33400a1fcc95b59500.png" />
+<img alt="../_images/06_Day3-Lecture-2_68_0.png" src="../_images/06_Day3-Lecture-2_68_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -2124,16 +2404,16 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c8797e329956b95af4f5d9cfa2d4bcac93d14005969527989424b0742ba6a632.png" src="../_images/c8797e329956b95af4f5d9cfa2d4bcac93d14005969527989424b0742ba6a632.png" />
+<img alt="../_images/06_Day3-Lecture-2_69_0.png" src="../_images/06_Day3-Lecture-2_69_0.png" />
 </div>
 </div>
 </section>
 <section id="observations">
-<h3><span class="section-number">6.6.5. </span>Observations<a class="headerlink" href="#observations" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.6.5. </span>Observations<a class="headerlink" href="#observations" title="Permalink to this headline">#</a></h3>
 <p>Our dimensionality reduction technique independently produced 23 visually-discernible clusters, but those clusters only partially agree with the KMeans clustering</p>
 </section>
 <section id="bonus-dim-reduction-with-pca">
-<h3><span class="section-number">6.6.6. </span>Bonus: Dim Reduction with PCA<a class="headerlink" href="#bonus-dim-reduction-with-pca" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.6.6. </span>Bonus: Dim Reduction with PCA<a class="headerlink" href="#bonus-dim-reduction-with-pca" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -2150,12 +2430,12 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/78696fbb67dd37a85a46468b65af64509adc18e53e40e5224dc97d7dd35f542d.png" src="../_images/78696fbb67dd37a85a46468b65af64509adc18e53e40e5224dc97d7dd35f542d.png" />
+<img alt="../_images/06_Day3-Lecture-2_72_0.png" src="../_images/06_Day3-Lecture-2_72_0.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(8124, 114)
 (8124,)
 </pre></div>
 </div>
-<img alt="../_images/33a767a23e18f1176c4da23545cdeceb0c60a04275c64b02ddc74b9d76d1b790.png" src="../_images/33a767a23e18f1176c4da23545cdeceb0c60a04275c64b02ddc74b9d76d1b790.png" />
+<img alt="../_images/06_Day3-Lecture-2_72_2.png" src="../_images/06_Day3-Lecture-2_72_2.png" />
 </div>
 </div>
 </section>
@@ -2174,7 +2454,7 @@ document.write(`
             mode: "python"
         },
         kernelOptions: {
-            name: "python3",
+            kernelName: "python3",
             path: "./chapters"
         },
         predefinedOutput: true
@@ -2182,139 +2462,55 @@ document.write(`
     </script>
     <script>kernelName = 'python3'</script>
 
-                </article>
+              </div>
               
-
-              
-              
-              
-              
-                <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
-<div class="prev-next-area">
-    <a class="left-prev"
-       href="05_Day3-Lecture-1.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">5. </span><strong>Day 3</strong></p>
-      </div>
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="05_Day3-Lecture-1.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">5. </span><strong>Day 3</strong></p>
+        </div>
     </a>
-    <a class="right-next"
-       href="07_Day3-Homework.html"
-       title="next page">
-      <div class="prev-next-info">
+    <a class='right-next' id="next-link" href="07_Day3-Homework.html" title="next page">
+    <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title"><span class="section-number">7. </span><strong>Day 3 Homework</strong></p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
-                </footer>
-              
-            </div>
-            
-            
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals-anti-goals">6.1. Goals/Anti-goals</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#roadmap">6.2. Roadmap</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-obtain-dataset-from-the-internet">6.3. A) Obtain dataset from the internet</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#description">6.3.1. Description:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#image-of-dataset">6.3.2. Image of dataset:</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-prepare-dataset-for-analysis-using-pandas">6.4. B) Prepare dataset for analysis using pandas</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overall-strategy">6.4.1. Overall Strategy</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#get-dataset-into-python">6.4.2. 0) Get dataset into python</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deal-with-missing-data-drop-column">6.4.3. 1) Deal with missing data (drop column)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transform-letters-into-numbers">6.4.4. 2) Transform letters into numbers</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#background-clustering">6.4.4.1. Background: clustering</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#image">6.4.4.2. Image</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#one-hot-encoding">6.4.4.3. One-hot encoding</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">6.4.4.4. image</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#code">6.4.4.5. Code</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-cluster-the-data-with-sklearn">6.5. C) Cluster the data with sklearn</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#background">6.5.1. Background:</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#image-black-box">6.5.1.1. Image: Black box</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#giving-parameters-to-k-means-black-box">6.5.1.2. Giving parameters to K-means black box</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#black-box-operation">6.5.1.3. Black Box Operation</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#done">6.5.1.4. Done?</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensionality-reduction-and-visualization">6.6. Dimensionality Reduction and Visualization</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#naive-approach">6.6.1. Naive approach:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#which-algorithm">6.6.2. Which algorithm?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strategy">6.6.3. Strategy</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">6.6.4. Code</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#observations">6.6.5. Observations</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-dim-reduction-with-pca">6.6.6. Bonus: Dim Reduction with PCA</a></li>
-</ul>
-</li>
-</ul>
-  </nav></div>
-
-</div></div>
-              
-            
-          </div>
-          <footer class="bd-footer-content">
-            
-<div class="bd-footer-content__inner container">
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
   
-  <div class="footer-item">
-    
-<p class="component-author">
-By Maggie Berrens and Parker Bremer
-</p>
-
-  </div>
+    By Maggie Berrens and Parker Bremer<br/>
   
-  <div class="footer-item">
-    
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-  <div class="footer-item">
-    
-<div class="extra_footer">
-  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+    <div class="extra_footer">
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
   <img alt="CC BY-SA 4.0" src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg"> 
 </a>
 
-</div>
-  </div>
-  
-</div>
-          </footer>
-        
-
-      </main>
     </div>
-  </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  <footer class="bd-footer">
-  </footer>
+
   </body>
 </html>
